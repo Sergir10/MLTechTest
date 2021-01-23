@@ -7,13 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6CC0B78A996825D45BCB7E6D /* Pods_MLTechTestTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B3E9592A00EB7F513010B8F /* Pods_MLTechTestTests.framework */; };
 		7773AB9B25BC54D9004B20DD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7773AB9A25BC54D9004B20DD /* AppDelegate.swift */; };
 		7773AB9D25BC54D9004B20DD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7773AB9C25BC54D9004B20DD /* SceneDelegate.swift */; };
 		7773AB9F25BC54D9004B20DD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7773AB9E25BC54D9004B20DD /* ViewController.swift */; };
-		7773ABA225BC54D9004B20DD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7773ABA025BC54D9004B20DD /* Main.storyboard */; };
 		7773ABA425BC54DC004B20DD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7773ABA325BC54DC004B20DD /* Assets.xcassets */; };
 		7773ABA725BC54DC004B20DD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7773ABA525BC54DC004B20DD /* LaunchScreen.storyboard */; };
 		7773ABB225BC54DC004B20DD /* MLTechTestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7773ABB125BC54DC004B20DD /* MLTechTestTests.swift */; };
+		EC659D031FE63803E2D0A319 /* Pods_MLTechTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B938AFF2546E468E94867877 /* Pods_MLTechTest.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -27,17 +28,22 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		30A96A2873CF77F76898484A /* Pods-MLTechTestTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MLTechTestTests.debug.xcconfig"; path = "Target Support Files/Pods-MLTechTestTests/Pods-MLTechTestTests.debug.xcconfig"; sourceTree = "<group>"; };
+		51134DC60ED292BEBEF8BFDF /* Pods-MLTechTestTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MLTechTestTests.release.xcconfig"; path = "Target Support Files/Pods-MLTechTestTests/Pods-MLTechTestTests.release.xcconfig"; sourceTree = "<group>"; };
+		5B3E9592A00EB7F513010B8F /* Pods_MLTechTestTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MLTechTestTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7773AB9725BC54D9004B20DD /* MLTechTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MLTechTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7773AB9A25BC54D9004B20DD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7773AB9C25BC54D9004B20DD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		7773AB9E25BC54D9004B20DD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		7773ABA125BC54D9004B20DD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		7773ABA325BC54DC004B20DD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7773ABA625BC54DC004B20DD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7773ABA825BC54DC004B20DD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7773ABAD25BC54DC004B20DD /* MLTechTestTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MLTechTestTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7773ABB125BC54DC004B20DD /* MLTechTestTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MLTechTestTests.swift; sourceTree = "<group>"; };
 		7773ABB325BC54DC004B20DD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AE7DFE9B38DB1FC1D5A1C680 /* Pods-MLTechTest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MLTechTest.debug.xcconfig"; path = "Target Support Files/Pods-MLTechTest/Pods-MLTechTest.debug.xcconfig"; sourceTree = "<group>"; };
+		B938AFF2546E468E94867877 /* Pods_MLTechTest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MLTechTest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C1E6625F0F346EF9203878DD /* Pods-MLTechTest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MLTechTest.release.xcconfig"; path = "Target Support Files/Pods-MLTechTest/Pods-MLTechTest.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,6 +51,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EC659D031FE63803E2D0A319 /* Pods_MLTechTest.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -52,18 +59,32 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6CC0B78A996825D45BCB7E6D /* Pods_MLTechTestTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2E0DEA271AEB843BAAAC7E59 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				AE7DFE9B38DB1FC1D5A1C680 /* Pods-MLTechTest.debug.xcconfig */,
+				C1E6625F0F346EF9203878DD /* Pods-MLTechTest.release.xcconfig */,
+				30A96A2873CF77F76898484A /* Pods-MLTechTestTests.debug.xcconfig */,
+				51134DC60ED292BEBEF8BFDF /* Pods-MLTechTestTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		7773AB8E25BC54D9004B20DD = {
 			isa = PBXGroup;
 			children = (
 				7773AB9925BC54D9004B20DD /* MLTechTest */,
 				7773ABB025BC54DC004B20DD /* MLTechTestTests */,
 				7773AB9825BC54D9004B20DD /* Products */,
+				2E0DEA271AEB843BAAAC7E59 /* Pods */,
+				839D272C0EABB4274147447A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -82,7 +103,6 @@
 				7773AB9A25BC54D9004B20DD /* AppDelegate.swift */,
 				7773AB9C25BC54D9004B20DD /* SceneDelegate.swift */,
 				7773AB9E25BC54D9004B20DD /* ViewController.swift */,
-				7773ABA025BC54D9004B20DD /* Main.storyboard */,
 				7773ABA325BC54DC004B20DD /* Assets.xcassets */,
 				7773ABA525BC54DC004B20DD /* LaunchScreen.storyboard */,
 				7773ABA825BC54DC004B20DD /* Info.plist */,
@@ -99,6 +119,15 @@
 			path = MLTechTestTests;
 			sourceTree = "<group>";
 		};
+		839D272C0EABB4274147447A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B938AFF2546E468E94867877 /* Pods_MLTechTest.framework */,
+				5B3E9592A00EB7F513010B8F /* Pods_MLTechTestTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -106,6 +135,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7773ABB625BC54DC004B20DD /* Build configuration list for PBXNativeTarget "MLTechTest" */;
 			buildPhases = (
+				EE6D2DC27453DC3459989896 /* [CP] Check Pods Manifest.lock */,
 				7773AB9325BC54D9004B20DD /* Sources */,
 				7773AB9425BC54D9004B20DD /* Frameworks */,
 				7773AB9525BC54D9004B20DD /* Resources */,
@@ -123,6 +153,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7773ABB925BC54DC004B20DD /* Build configuration list for PBXNativeTarget "MLTechTestTests" */;
 			buildPhases = (
+				F7B5058099F8283076F5608D /* [CP] Check Pods Manifest.lock */,
 				7773ABA925BC54DC004B20DD /* Sources */,
 				7773ABAA25BC54DC004B20DD /* Frameworks */,
 				7773ABAB25BC54DC004B20DD /* Resources */,
@@ -182,7 +213,6 @@
 			files = (
 				7773ABA725BC54DC004B20DD /* LaunchScreen.storyboard in Resources */,
 				7773ABA425BC54DC004B20DD /* Assets.xcassets in Resources */,
-				7773ABA225BC54D9004B20DD /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -194,6 +224,53 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		EE6D2DC27453DC3459989896 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MLTechTest-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F7B5058099F8283076F5608D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MLTechTestTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		7773AB9325BC54D9004B20DD /* Sources */ = {
@@ -225,14 +302,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		7773ABA025BC54D9004B20DD /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				7773ABA125BC54D9004B20DD /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		7773ABA525BC54DC004B20DD /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -360,11 +429,13 @@
 		};
 		7773ABB725BC54DC004B20DD /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AE7DFE9B38DB1FC1D5A1C680 /* Pods-MLTechTest.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = QQZCAF8474;
 				INFOPLIST_FILE = MLTechTest/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -372,17 +443,19 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.cebollitas.MLTechTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
 		7773ABB825BC54DC004B20DD /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C1E6625F0F346EF9203878DD /* Pods-MLTechTest.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = QQZCAF8474;
 				INFOPLIST_FILE = MLTechTest/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -390,12 +463,13 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.cebollitas.MLTechTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
 		7773ABBA25BC54DC004B20DD /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 30A96A2873CF77F76898484A /* Pods-MLTechTestTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -418,6 +492,7 @@
 		};
 		7773ABBB25BC54DC004B20DD /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 51134DC60ED292BEBEF8BFDF /* Pods-MLTechTestTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
