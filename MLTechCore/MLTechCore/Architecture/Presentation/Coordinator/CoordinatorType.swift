@@ -6,13 +6,9 @@
 //  Copyright © 2021 Cebollitas. All rights reserved.
 //
 
-
 import UIKit
 
 public protocol CoordinatorType: AnyObject {
-    var childCoordinators: [CoordinatorType] { get set }
-
     func start()
-    func addCoordinatorChild(_ coordinator: CoordinatorType)
-    func removeCoordinatorChild(_ coordinator: CoordinatorType)
+    func childDeinitialized(_ child: CoordinatorType)
 }
