@@ -10,6 +10,13 @@
 		77DDAEF625BC561300B0ED2C /* MLTechCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 77DDAEEC25BC561300B0ED2C /* MLTechCore.framework */; };
 		77DDAEFB25BC561300B0ED2C /* MLTechCoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77DDAEFA25BC561300B0ED2C /* MLTechCoreTests.swift */; };
 		77DDAEFD25BC561300B0ED2C /* MLTechCore.h in Headers */ = {isa = PBXBuildFile; fileRef = 77DDAEEF25BC561300B0ED2C /* MLTechCore.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		77DDAF0E25BC572A00B0ED2C /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77DDAF0B25BC572A00B0ED2C /* BaseViewController.swift */; };
+		77DDAF0F25BC572A00B0ED2C /* BaseViewControllerType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77DDAF0C25BC572A00B0ED2C /* BaseViewControllerType.swift */; };
+		77DDAF1025BC572A00B0ED2C /* ViewControllerBindable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77DDAF0D25BC572A00B0ED2C /* ViewControllerBindable.swift */; };
+		77DDAF1325BC573300B0ED2C /* BasePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77DDAF1125BC573300B0ED2C /* BasePresenter.swift */; };
+		77DDAF1425BC573300B0ED2C /* BasePresenterType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77DDAF1225BC573300B0ED2C /* BasePresenterType.swift */; };
+		77DDAF1725BC573D00B0ED2C /* BaseCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77DDAF1525BC573D00B0ED2C /* BaseCoordinator.swift */; };
+		77DDAF1825BC573D00B0ED2C /* CoordinatorType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77DDAF1625BC573D00B0ED2C /* CoordinatorType.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +36,13 @@
 		77DDAEF525BC561300B0ED2C /* MLTechCoreTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MLTechCoreTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		77DDAEFA25BC561300B0ED2C /* MLTechCoreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MLTechCoreTests.swift; sourceTree = "<group>"; };
 		77DDAEFC25BC561300B0ED2C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		77DDAF0B25BC572A00B0ED2C /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		77DDAF0C25BC572A00B0ED2C /* BaseViewControllerType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewControllerType.swift; sourceTree = "<group>"; };
+		77DDAF0D25BC572A00B0ED2C /* ViewControllerBindable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControllerBindable.swift; sourceTree = "<group>"; };
+		77DDAF1125BC573300B0ED2C /* BasePresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BasePresenter.swift; sourceTree = "<group>"; };
+		77DDAF1225BC573300B0ED2C /* BasePresenterType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BasePresenterType.swift; sourceTree = "<group>"; };
+		77DDAF1525BC573D00B0ED2C /* BaseCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseCoordinator.swift; sourceTree = "<group>"; };
+		77DDAF1625BC573D00B0ED2C /* CoordinatorType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoordinatorType.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +85,7 @@
 		77DDAEEE25BC561300B0ED2C /* MLTechCore */ = {
 			isa = PBXGroup;
 			children = (
+				77DDAF0625BC568D00B0ED2C /* Architecture */,
 				77DDAEEF25BC561300B0ED2C /* MLTechCore.h */,
 				77DDAEF025BC561300B0ED2C /* Info.plist */,
 			);
@@ -84,6 +99,52 @@
 				77DDAEFC25BC561300B0ED2C /* Info.plist */,
 			);
 			path = MLTechCoreTests;
+			sourceTree = "<group>";
+		};
+		77DDAF0625BC568D00B0ED2C /* Architecture */ = {
+			isa = PBXGroup;
+			children = (
+				77DDAF0725BC569100B0ED2C /* Presentation */,
+			);
+			path = Architecture;
+			sourceTree = "<group>";
+		};
+		77DDAF0725BC569100B0ED2C /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				77DDAF0A25BC56BE00B0ED2C /* View */,
+				77DDAF0925BC56BB00B0ED2C /* Presenter */,
+				77DDAF0825BC569400B0ED2C /* Coordinator */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		77DDAF0825BC569400B0ED2C /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				77DDAF1525BC573D00B0ED2C /* BaseCoordinator.swift */,
+				77DDAF1625BC573D00B0ED2C /* CoordinatorType.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		77DDAF0925BC56BB00B0ED2C /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				77DDAF1125BC573300B0ED2C /* BasePresenter.swift */,
+				77DDAF1225BC573300B0ED2C /* BasePresenterType.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		77DDAF0A25BC56BE00B0ED2C /* View */ = {
+			isa = PBXGroup;
+			children = (
+				77DDAF0B25BC572A00B0ED2C /* BaseViewController.swift */,
+				77DDAF0C25BC572A00B0ED2C /* BaseViewControllerType.swift */,
+				77DDAF0D25BC572A00B0ED2C /* ViewControllerBindable.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -148,6 +209,7 @@
 				TargetAttributes = {
 					77DDAEEB25BC561300B0ED2C = {
 						CreatedOnToolsVersion = 11.6;
+						LastSwiftMigration = 1160;
 					};
 					77DDAEF425BC561300B0ED2C = {
 						CreatedOnToolsVersion = 11.6;
@@ -195,6 +257,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				77DDAF1825BC573D00B0ED2C /* CoordinatorType.swift in Sources */,
+				77DDAF1425BC573300B0ED2C /* BasePresenterType.swift in Sources */,
+				77DDAF1725BC573D00B0ED2C /* BaseCoordinator.swift in Sources */,
+				77DDAF1025BC572A00B0ED2C /* ViewControllerBindable.swift in Sources */,
+				77DDAF1325BC573300B0ED2C /* BasePresenter.swift in Sources */,
+				77DDAF0E25BC572A00B0ED2C /* BaseViewController.swift in Sources */,
+				77DDAF0F25BC572A00B0ED2C /* BaseViewControllerType.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -340,6 +409,7 @@
 		77DDAF0125BC561300B0ED2C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = QQZCAF8474;
@@ -356,6 +426,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.cebollitas.MLTechCore;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -364,6 +435,7 @@
 		77DDAF0225BC561300B0ED2C /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = QQZCAF8474;
@@ -388,6 +460,7 @@
 		77DDAF0425BC561300B0ED2C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = QQZCAF8474;
 				INFOPLIST_FILE = MLTechCoreTests/Info.plist;
@@ -406,6 +479,7 @@
 		77DDAF0525BC561300B0ED2C /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = QQZCAF8474;
 				INFOPLIST_FILE = MLTechCoreTests/Info.plist;
