@@ -27,6 +27,7 @@ public final class ApplicationCoordinator: BaseCoordinator {
     public override func start() {
         let module = ApplicationConfigurator.getModule(
             moduleInput: ApplicationConfigurator.ModuleInput(coordinator: self))
+
         navigationController.setViewControllers([module], animated: false)
         navigationController.setNavigationBarHidden(true, animated: false)
 
