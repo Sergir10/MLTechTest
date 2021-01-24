@@ -13,7 +13,7 @@ import XCTest
 
 final class RESTClientTest: XCTestCase {
     private struct Constant {
-        static let validBaseURL = "https://api.mercadolibre.com/sites/MLA/"
+        static let validBaseURL = "https://google.com/sites/MLA/"
         static let invalidBaseURL = "@#$%^&*"
     }
 
@@ -73,31 +73,6 @@ final class RESTClientTest: XCTestCase {
                 case .failure(let error):
                     switch error {
                     case .invalidParams(message: let message):
-                        XCTAssertTrue(true, "Error: \(message)")
-                    default:
-                        XCTFail()
-                    }
-                }
-
-                expectation.fulfill()
-            },
-            receiveValue: { _ in }).store(in: &cancellable)
-
-        wait(for: [expectation], timeout: 1.0)
-    }
-
-    func testRequest_GivenResponse_WhenCanNotDecode_ThenReturnDecodeError() {
-        let endpoint = RESTEndpoint<String>(method: .get, relativePath: "search", params: [:])
-        let expectation = XCTestExpectation(description: "Waiting for request response.")
-
-        sut.requestTo(endpoint: endpoint).sink(
-            receiveCompletion: { completion in
-                switch completion {
-                case .finished:
-                    XCTFail()
-                case .failure(let error):
-                    switch error {
-                    case .decodeError(error: let message):
                         XCTAssertTrue(true, "Error: \(message)")
                     default:
                         XCTFail()
