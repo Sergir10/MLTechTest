@@ -9,20 +9,24 @@
 import MLTechCore
 import UIKit
 
-final class ProductListConfigurator {
-    static func getModule(moduleInput: ProductListConfigurator.ModuleInput) -> UIViewController {
+public final class ProductListConfigurator {
+    public static func getModule(moduleInput: ProductListConfigurator.ModuleInput) -> UIViewController {
         let presenter = ProductListPresenter(
             dependencies: ProductListPresenter.Dependencies(coordinator: moduleInput.coordinator))
-        
+
         let viewController = ProductListViewController(presenter: presenter)
         viewController.modalPresentationStyle = .fullScreen
-        
+
         return viewController
     }
 }
 
 extension ProductListConfigurator {
-    struct ModuleInput {
+    public struct ModuleInput {
         let coordinator: ProductListCoordinatorType
+
+        public init(coordinator: ProductListCoordinatorType) {
+            self.coordinator = coordinator
+        }
     }
 }

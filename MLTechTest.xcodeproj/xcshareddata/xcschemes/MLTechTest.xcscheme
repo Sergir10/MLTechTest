@@ -76,6 +76,76 @@
                ReferencedContainer = "container:ProductList/ProductList.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "NO"
+            buildForProfiling = "NO"
+            buildForArchiving = "NO"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "77DDAFCB25BD01E200B0ED2C"
+               BuildableName = "MLApplicationTests.xctest"
+               BlueprintName = "MLApplicationTests"
+               ReferencedContainer = "container:MLApplication/MLApplication.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "NO"
+            buildForProfiling = "NO"
+            buildForArchiving = "NO"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "77DDAEF425BC561300B0ED2C"
+               BuildableName = "MLTechCoreTests.xctest"
+               BlueprintName = "MLTechCoreTests"
+               ReferencedContainer = "container:MLTechCore/MLTechCore.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "NO"
+            buildForProfiling = "NO"
+            buildForArchiving = "NO"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "77DDAF2B25BC57C400B0ED2C"
+               BuildableName = "MLTechNetworkTests.xctest"
+               BlueprintName = "MLTechNetworkTests"
+               ReferencedContainer = "container:MLTechNetwork/MLTechNetwork.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "NO"
+            buildForProfiling = "NO"
+            buildForArchiving = "NO"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "7773ABAC25BC54DC004B20DD"
+               BuildableName = "MLTechTestTests.xctest"
+               BlueprintName = "MLTechTestTests"
+               ReferencedContainer = "container:MLTechTest.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "NO"
+            buildForProfiling = "NO"
+            buildForArchiving = "NO"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "77DDAFFC25BDB16400B0ED2C"
+               BuildableName = "ProductListTests.xctest"
+               BlueprintName = "ProductListTests"
+               ReferencedContainer = "container:ProductList/ProductList.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
       </BuildActionEntries>
    </BuildAction>
    <TestAction
@@ -84,6 +154,56 @@
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "77DDAFCB25BD01E200B0ED2C"
+               BuildableName = "MLApplicationTests.xctest"
+               BlueprintName = "MLApplicationTests"
+               ReferencedContainer = "container:MLApplication/MLApplication.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "77DDAEF425BC561300B0ED2C"
+               BuildableName = "MLTechCoreTests.xctest"
+               BlueprintName = "MLTechCoreTests"
+               ReferencedContainer = "container:MLTechCore/MLTechCore.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "77DDAF2B25BC57C400B0ED2C"
+               BuildableName = "MLTechNetworkTests.xctest"
+               BlueprintName = "MLTechNetworkTests"
+               ReferencedContainer = "container:MLTechNetwork/MLTechNetwork.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "7773ABAC25BC54DC004B20DD"
+               BuildableName = "MLTechTestTests.xctest"
+               BlueprintName = "MLTechTestTests"
+               ReferencedContainer = "container:MLTechTest.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "77DDAFFC25BDB16400B0ED2C"
+               BuildableName = "ProductListTests.xctest"
+               BlueprintName = "ProductListTests"
+               ReferencedContainer = "container:ProductList/ProductList.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
    </TestAction>
    <LaunchAction

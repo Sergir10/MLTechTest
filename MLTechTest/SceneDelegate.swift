@@ -7,6 +7,8 @@
 //
 
 import MLApplication
+import MLTechCore
+
 import UIKit
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {

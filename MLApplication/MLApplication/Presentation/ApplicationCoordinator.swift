@@ -8,11 +8,9 @@
 
 import MLTechCore
 import MLTechNetwork
-import UIKit
 
-public protocol ApplicationCoordinatorType: CoordinatorType {
-    func runSearchModule()
-}
+import ProductList
+import UIKit
 
 public final class ApplicationCoordinator: BaseCoordinator {
     private let window: UIWindow
@@ -37,5 +35,12 @@ public final class ApplicationCoordinator: BaseCoordinator {
 }
 
 extension ApplicationCoordinator: ApplicationCoordinatorType {
-    public func runSearchModule() {}
+    public func runProductListModule() {
+        let module = ProductListConfigurator.getModule(
+            moduleInput: ProductListConfigurator.ModuleInput(coordinator: self))
+        
+        navigationController.setViewControllers([module], animated: false)
+    }
+
+    public func runProductDetailModule() {}
 }

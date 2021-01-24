@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		77DDAFED25BDB16400B0ED2C /* ProductListConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77DDAFEC25BDB16400B0ED2C /* ProductListConfigurator.swift */; };
 		77DDAFEF25BDB16400B0ED2C /* ProductListContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77DDAFEE25BDB16400B0ED2C /* ProductListContract.swift */; };
-		77DDAFF125BDB16400B0ED2C /* ProductListCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77DDAFF025BDB16400B0ED2C /* ProductListCoordinator.swift */; };
 		77DDAFF325BDB16400B0ED2C /* ProductListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77DDAFF225BDB16400B0ED2C /* ProductListPresenter.swift */; };
 		77DDAFF525BDB16400B0ED2C /* ProductListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77DDAFF425BDB16400B0ED2C /* ProductListViewController.swift */; };
 		77DDAFF725BDB16400B0ED2C /* ProductListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77DDAFF625BDB16400B0ED2C /* ProductListView.swift */; };
@@ -50,7 +49,6 @@
 		77DDAFE725BDB16400B0ED2C /* ProductList.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ProductList.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		77DDAFEC25BDB16400B0ED2C /* ProductListConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListConfigurator.swift; sourceTree = "<group>"; };
 		77DDAFEE25BDB16400B0ED2C /* ProductListContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListContract.swift; sourceTree = "<group>"; };
-		77DDAFF025BDB16400B0ED2C /* ProductListCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListCoordinator.swift; sourceTree = "<group>"; };
 		77DDAFF225BDB16400B0ED2C /* ProductListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListPresenter.swift; sourceTree = "<group>"; };
 		77DDAFF425BDB16400B0ED2C /* ProductListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListViewController.swift; sourceTree = "<group>"; };
 		77DDAFF625BDB16400B0ED2C /* ProductListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListView.swift; sourceTree = "<group>"; };
@@ -116,7 +114,6 @@
 			children = (
 				77DDAFEC25BDB16400B0ED2C /* ProductListConfigurator.swift */,
 				77DDAFEE25BDB16400B0ED2C /* ProductListContract.swift */,
-				77DDAFF025BDB16400B0ED2C /* ProductListCoordinator.swift */,
 				77DDAFF225BDB16400B0ED2C /* ProductListPresenter.swift */,
 				77DDAFF425BDB16400B0ED2C /* ProductListViewController.swift */,
 				77DDAFF625BDB16400B0ED2C /* ProductListView.swift */,
@@ -199,7 +196,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1160;
-				LastUpgradeCheck = 1160;
+				LastUpgradeCheck = 1230;
 				ORGANIZATIONNAME = Cebollitas;
 				TargetAttributes = {
 					77DDAFE625BDB16400B0ED2C = {
@@ -253,7 +250,6 @@
 			files = (
 				77DDAFF725BDB16400B0ED2C /* ProductListView.swift in Sources */,
 				77DDAFED25BDB16400B0ED2C /* ProductListConfigurator.swift in Sources */,
-				77DDAFF125BDB16400B0ED2C /* ProductListCoordinator.swift in Sources */,
 				77DDAFF525BDB16400B0ED2C /* ProductListViewController.swift in Sources */,
 				77DDAFF325BDB16400B0ED2C /* ProductListPresenter.swift in Sources */,
 				77DDAFEF25BDB16400B0ED2C /* ProductListContract.swift in Sources */,
@@ -305,6 +301,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -368,6 +365,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;

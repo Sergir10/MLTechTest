@@ -10,6 +10,7 @@
 		775B09F225BCFFBC00BA3A29 /* LogModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 775B09F125BCFFBC00BA3A29 /* LogModel.swift */; };
 		775B0AA025BD1B1500BA3A29 /* MLEnvironmentType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 775B0A9E25BD1B1500BA3A29 /* MLEnvironmentType.swift */; };
 		775B0AA125BD1B1500BA3A29 /* MLEnvironment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 775B0A9F25BD1B1500BA3A29 /* MLEnvironment.swift */; };
+		775B0AD025BDB88F00BA3A29 /* ApplicationCoordinatorType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 775B0ACF25BDB88F00BA3A29 /* ApplicationCoordinatorType.swift */; };
 		77DDAEF625BC561300B0ED2C /* MLTechCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 77DDAEEC25BC561300B0ED2C /* MLTechCore.framework */; };
 		77DDAEFB25BC561300B0ED2C /* MLTechCoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77DDAEFA25BC561300B0ED2C /* MLTechCoreTests.swift */; };
 		77DDAF0E25BC572A00B0ED2C /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77DDAF0B25BC572A00B0ED2C /* BaseViewController.swift */; };
@@ -37,6 +38,7 @@
 		775B09F125BCFFBC00BA3A29 /* LogModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogModel.swift; sourceTree = "<group>"; };
 		775B0A9E25BD1B1500BA3A29 /* MLEnvironmentType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MLEnvironmentType.swift; sourceTree = "<group>"; };
 		775B0A9F25BD1B1500BA3A29 /* MLEnvironment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MLEnvironment.swift; sourceTree = "<group>"; };
+		775B0ACF25BDB88F00BA3A29 /* ApplicationCoordinatorType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationCoordinatorType.swift; sourceTree = "<group>"; };
 		77DDAEEC25BC561300B0ED2C /* MLTechCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MLTechCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		77DDAEF025BC561300B0ED2C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		77DDAEF525BC561300B0ED2C /* MLTechCoreTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MLTechCoreTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -97,6 +99,14 @@
 				775B0A9F25BD1B1500BA3A29 /* MLEnvironment.swift */,
 			);
 			path = Environment;
+			sourceTree = "<group>";
+		};
+		775B0ACE25BDB85C00BA3A29 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				775B0ACF25BDB88F00BA3A29 /* ApplicationCoordinatorType.swift */,
+			);
+			path = Application;
 			sourceTree = "<group>";
 		};
 		77DDAEE225BC561300B0ED2C = {
@@ -160,6 +170,7 @@
 			children = (
 				77DDAF1525BC573D00B0ED2C /* BaseCoordinator.swift */,
 				77DDAF1625BC573D00B0ED2C /* CoordinatorType.swift */,
+				775B0ACE25BDB85C00BA3A29 /* Application */,
 			);
 			path = Coordinator;
 			sourceTree = "<group>";
@@ -255,7 +266,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1160;
-				LastUpgradeCheck = 1160;
+				LastUpgradeCheck = 1230;
 				ORGANIZATIONNAME = Cebollitas;
 				TargetAttributes = {
 					77DDAEEB25BC561300B0ED2C = {
@@ -320,6 +331,7 @@
 				77DDAF5325BCE42A00B0ED2C /* LocalLogger.swift in Sources */,
 				775B09F225BCFFBC00BA3A29 /* LogModel.swift in Sources */,
 				77DDAF5625BCE59200B0ED2C /* Date+Extension.swift in Sources */,
+				775B0AD025BDB88F00BA3A29 /* ApplicationCoordinatorType.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -368,6 +380,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -431,6 +444,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;

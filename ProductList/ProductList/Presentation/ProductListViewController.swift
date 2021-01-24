@@ -16,6 +16,7 @@ final class ProductListViewController: BaseViewController<ProductListPresenterTy
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        customView.backgroundColor = .red
     }
 }
 

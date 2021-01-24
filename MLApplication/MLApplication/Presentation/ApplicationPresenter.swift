@@ -19,6 +19,10 @@ final class ApplicationPresenter: BasePresenter<ApplicationViewController, Appli
         self.dependencies = dependencies
         super.init()
     }
+    
+    override func viewDidLoad() {
+        dependencies.coordinator.runProductListModule()
+    }
 }
 
 extension ApplicationPresenter: ApplicationPresenterType {}
