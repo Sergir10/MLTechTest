@@ -7,13 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		775B0AE125BDE78900BA3A29 /* ProductListRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 775B0AE025BDE78900BA3A29 /* ProductListRepository.swift */; };
+		775B0AE425BDE79F00BA3A29 /* ProductListRespositoryType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 775B0AE325BDE79F00BA3A29 /* ProductListRespositoryType.swift */; };
+		775B0AEA25BDE89F00BA3A29 /* ProductListRespositoryTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 775B0AE925BDE89F00BA3A29 /* ProductListRespositoryTest.swift */; };
 		77DDAFED25BDB16400B0ED2C /* ProductListConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77DDAFEC25BDB16400B0ED2C /* ProductListConfigurator.swift */; };
 		77DDAFEF25BDB16400B0ED2C /* ProductListContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77DDAFEE25BDB16400B0ED2C /* ProductListContract.swift */; };
 		77DDAFF325BDB16400B0ED2C /* ProductListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77DDAFF225BDB16400B0ED2C /* ProductListPresenter.swift */; };
 		77DDAFF525BDB16400B0ED2C /* ProductListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77DDAFF425BDB16400B0ED2C /* ProductListViewController.swift */; };
 		77DDAFF725BDB16400B0ED2C /* ProductListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77DDAFF625BDB16400B0ED2C /* ProductListView.swift */; };
 		77DDAFFE25BDB16400B0ED2C /* ProductList.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 77DDAFE725BDB16400B0ED2C /* ProductList.framework */; };
-		77DDB00325BDB16400B0ED2C /* ProductListTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77DDB00225BDB16400B0ED2C /* ProductListTests.swift */; };
 		77DDB01125BDB18000B0ED2C /* MLTechCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 77DDB00F25BDB18000B0ED2C /* MLTechCore.framework */; };
 		77DDB01225BDB18000B0ED2C /* MLTechCore.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 77DDB00F25BDB18000B0ED2C /* MLTechCore.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		77DDB01325BDB18000B0ED2C /* MLTechNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 77DDB01025BDB18000B0ED2C /* MLTechNetwork.framework */; };
@@ -46,6 +48,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		775B0AE025BDE78900BA3A29 /* ProductListRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListRepository.swift; sourceTree = "<group>"; };
+		775B0AE325BDE79F00BA3A29 /* ProductListRespositoryType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListRespositoryType.swift; sourceTree = "<group>"; };
+		775B0AE925BDE89F00BA3A29 /* ProductListRespositoryTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListRespositoryTest.swift; sourceTree = "<group>"; };
 		77DDAFE725BDB16400B0ED2C /* ProductList.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ProductList.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		77DDAFEC25BDB16400B0ED2C /* ProductListConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListConfigurator.swift; sourceTree = "<group>"; };
 		77DDAFEE25BDB16400B0ED2C /* ProductListContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListContract.swift; sourceTree = "<group>"; };
@@ -54,7 +59,6 @@
 		77DDAFF625BDB16400B0ED2C /* ProductListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListView.swift; sourceTree = "<group>"; };
 		77DDAFF825BDB16400B0ED2C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		77DDAFFD25BDB16400B0ED2C /* ProductListTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ProductListTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		77DDB00225BDB16400B0ED2C /* ProductListTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListTests.swift; sourceTree = "<group>"; };
 		77DDB00425BDB16400B0ED2C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		77DDB00F25BDB18000B0ED2C /* MLTechCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = MLTechCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		77DDB01025BDB18000B0ED2C /* MLTechNetwork.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = MLTechNetwork.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -81,6 +85,30 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		775B0ADD25BDCDB700BA3A29 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				775B0AE325BDE79F00BA3A29 /* ProductListRespositoryType.swift */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		775B0ADE25BDCE8700BA3A29 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				775B0AE025BDE78900BA3A29 /* ProductListRepository.swift */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		775B0AE625BDE88C00BA3A29 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				775B0AE925BDE89F00BA3A29 /* ProductListRespositoryTest.swift */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
 		77DDAFDD25BDB16300B0ED2C = {
 			isa = PBXGroup;
 			children = (
@@ -104,6 +132,8 @@
 			isa = PBXGroup;
 			children = (
 				77DDAFF825BDB16400B0ED2C /* Info.plist */,
+				775B0ADD25BDCDB700BA3A29 /* Domain */,
+				775B0ADE25BDCE8700BA3A29 /* Data */,
 				77DDAFEB25BDB16400B0ED2C /* Presentation */,
 			);
 			path = ProductList;
@@ -124,8 +154,8 @@
 		77DDB00125BDB16400B0ED2C /* ProductListTests */ = {
 			isa = PBXGroup;
 			children = (
-				77DDB00225BDB16400B0ED2C /* ProductListTests.swift */,
 				77DDB00425BDB16400B0ED2C /* Info.plist */,
+				775B0AE625BDE88C00BA3A29 /* Data */,
 			);
 			path = ProductListTests;
 			sourceTree = "<group>";
@@ -204,6 +234,7 @@
 					};
 					77DDAFFC25BDB16400B0ED2C = {
 						CreatedOnToolsVersion = 11.6;
+						LastSwiftMigration = 1230;
 					};
 				};
 			};
@@ -251,6 +282,8 @@
 				77DDAFF725BDB16400B0ED2C /* ProductListView.swift in Sources */,
 				77DDAFED25BDB16400B0ED2C /* ProductListConfigurator.swift in Sources */,
 				77DDAFF525BDB16400B0ED2C /* ProductListViewController.swift in Sources */,
+				775B0AE125BDE78900BA3A29 /* ProductListRepository.swift in Sources */,
+				775B0AE425BDE79F00BA3A29 /* ProductListRespositoryType.swift in Sources */,
 				77DDAFF325BDB16400B0ED2C /* ProductListPresenter.swift in Sources */,
 				77DDAFEF25BDB16400B0ED2C /* ProductListContract.swift in Sources */,
 			);
@@ -260,7 +293,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				77DDB00325BDB16400B0ED2C /* ProductListTests.swift in Sources */,
+				775B0AEA25BDE89F00BA3A29 /* ProductListRespositoryTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -453,6 +486,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = QQZCAF8474;
 				INFOPLIST_FILE = ProductListTests/Info.plist;
@@ -463,6 +497,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.cebollitas.ProductListTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -472,6 +507,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = QQZCAF8474;
 				INFOPLIST_FILE = ProductListTests/Info.plist;

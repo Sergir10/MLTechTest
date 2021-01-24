@@ -34,12 +34,12 @@ final class RESTClientTest: XCTestCase {
     }
 
     func testRequest_GivenInvalidBaseURL_ThenReturnInvalidPathError() {
-        let endpoint = RESTEndpoint<String>(method: .get, relativePath: "search", params: [:])
+        let endpoint = RESTEndpoint(method: .get, relativePath: "search", params: [:])
         let expectation = XCTestExpectation(description: "Waiting for request response.")
 
         sut = RESTClient(baseURL: Constant.invalidBaseURL)
 
-        sut.requestTo(endpoint: endpoint).sink(
+        sut.requestTo(endpoint: endpoint, model: String.self).sink(
             receiveCompletion: { completion in
                 switch completion {
                 case .finished:
@@ -55,17 +55,17 @@ final class RESTClientTest: XCTestCase {
 
                 expectation.fulfill()
             },
-            receiveValue: { _ in }).store(in: &cancellable)
+            receiveValue: { (_: String) in }).store(in: &cancellable)
 
         wait(for: [expectation], timeout: 1.0)
     }
 
     func testRequest_GivenInvalidParams_WhenIsURLEncodedContentType_ThenReturnInvalidParamsError() {
         let invalidParams: [String: Any] = ["Param1": 12, "Param2": true]
-        let endpoint = RESTEndpoint<String>(method: .get, relativePath: "search", params: invalidParams, contentType: .URLEncoded)
+        let endpoint = RESTEndpoint(method: .get, relativePath: "search", params: invalidParams, contentType: .URLEncoded)
         let expectation = XCTestExpectation(description: "Waiting for request response.")
 
-        sut.requestTo(endpoint: endpoint).sink(
+        sut.requestTo(endpoint: endpoint, model: String.self).sink(
             receiveCompletion: { completion in
                 switch completion {
                 case .finished:
@@ -81,7 +81,7 @@ final class RESTClientTest: XCTestCase {
 
                 expectation.fulfill()
             },
-            receiveValue: { _ in }).store(in: &cancellable)
+            receiveValue: { (_: String) in }).store(in: &cancellable)
 
         wait(for: [expectation], timeout: 1.0)
     }

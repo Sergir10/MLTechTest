@@ -57,9 +57,9 @@
 	<key>BaseURL</key>
 	<dict>
 		<key>debug</key>
-		<string>https://api.mercadolibre.com/sites/MLA/</string>
+		<string>https://api.mercadolibre.com</string>
 		<key>release</key>
-		<string>https://api.mercadolibre.com/sites/MLA/</string>
+		<string>https://api.mercadolibre.com</string>
 	</dict>
 </dict>
 </plist>

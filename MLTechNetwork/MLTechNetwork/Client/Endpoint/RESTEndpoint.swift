@@ -6,7 +6,7 @@
 //  Copyright © 2021 Cebollitas. All rights reserved.
 //
 
-public struct RESTEndpoint<Response>: RESTEndpointType {
+public struct RESTEndpoint: RESTEndpointType {
     public var method: RESTMethod
     public var relativePath: String
     public var params: [String: Any]?

@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		77554F5625BCF82300F17850 /* MLTechCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 77554F5525BCF82300F17850 /* MLTechCore.framework */; };
 		77554F5725BCF82300F17850 /* MLTechCore.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 77554F5525BCF82300F17850 /* MLTechCore.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		775B0AEF25BDEA6C00BA3A29 /* RESTClientStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 775B0AEE25BDEA6C00BA3A29 /* RESTClientStub.swift */; };
+		775B0AF325BDF17C00BA3A29 /* EndpointDummy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 775B0AF225BDF17C00BA3A29 /* EndpointDummy.swift */; };
+		775B0AF625BE0DEB00BA3A29 /* RESTClientSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 775B0AF525BE0DEB00BA3A29 /* RESTClientSpy.swift */; };
 		77DDAF2D25BC57C400B0ED2C /* MLTechNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 77DDAF2325BC57C400B0ED2C /* MLTechNetwork.framework */; };
 		77DDAF3F25BC840100B0ED2C /* RESTClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77DDAF3E25BC840100B0ED2C /* RESTClient.swift */; };
 		77DDAF4125BC842A00B0ED2C /* RESTClientTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77DDAF4025BC842A00B0ED2C /* RESTClientTest.swift */; };
@@ -46,6 +49,9 @@
 
 /* Begin PBXFileReference section */
 		77554F5525BCF82300F17850 /* MLTechCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = MLTechCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		775B0AEE25BDEA6C00BA3A29 /* RESTClientStub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RESTClientStub.swift; sourceTree = "<group>"; };
+		775B0AF225BDF17C00BA3A29 /* EndpointDummy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndpointDummy.swift; sourceTree = "<group>"; };
+		775B0AF525BE0DEB00BA3A29 /* RESTClientSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RESTClientSpy.swift; sourceTree = "<group>"; };
 		77DDAF2325BC57C400B0ED2C /* MLTechNetwork.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MLTechNetwork.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		77DDAF2725BC57C400B0ED2C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		77DDAF2C25BC57C400B0ED2C /* MLTechNetworkTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MLTechNetworkTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -88,6 +94,16 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		775B0AED25BDEA5600BA3A29 /* Stunt */ = {
+			isa = PBXGroup;
+			children = (
+				775B0AEE25BDEA6C00BA3A29 /* RESTClientStub.swift */,
+				775B0AF225BDF17C00BA3A29 /* EndpointDummy.swift */,
+				775B0AF525BE0DEB00BA3A29 /* RESTClientSpy.swift */,
+			);
+			path = Stunt;
+			sourceTree = "<group>";
+		};
 		77DDAF1925BC57C400B0ED2C = {
 			isa = PBXGroup;
 			children = (
@@ -110,6 +126,7 @@
 		77DDAF2525BC57C400B0ED2C /* MLTechNetwork */ = {
 			isa = PBXGroup;
 			children = (
+				775B0AED25BDEA5600BA3A29 /* Stunt */,
 				77DDAF4325BC879300B0ED2C /* Error */,
 				77DDAF3D25BC83F600B0ED2C /* Client */,
 				77DDAF2725BC57C400B0ED2C /* Info.plist */,
@@ -276,11 +293,14 @@
 			files = (
 				77DDAF4A25BC8FCA00B0ED2C /* RESTEndpoint.swift in Sources */,
 				77DDAF4525BC87A400B0ED2C /* ServiceError.swift in Sources */,
+				775B0AEF25BDEA6C00BA3A29 /* RESTClientStub.swift in Sources */,
 				77DDAF4C25BC925400B0ED2C /* RESTContentType.swift in Sources */,
 				77DDAF3F25BC840100B0ED2C /* RESTClient.swift in Sources */,
 				77DDAF4E25BC92F200B0ED2C /* RESTClientType.swift in Sources */,
 				77DDAF4725BC890100B0ED2C /* RESTMethod.swift in Sources */,
 				77DDAF5025BC978D00B0ED2C /* RESTEndpointType.swift in Sources */,
+				775B0AF325BDF17C00BA3A29 /* EndpointDummy.swift in Sources */,
+				775B0AF625BE0DEB00BA3A29 /* RESTClientSpy.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

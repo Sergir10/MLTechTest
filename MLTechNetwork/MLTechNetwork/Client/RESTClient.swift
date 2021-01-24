@@ -21,7 +21,7 @@ public final class RESTClient {
         self.baseURL = baseURL
     }
 
-    private func getURLRequest<Response>(from endpoint: RESTEndpoint<Response>) throws -> URLRequest {
+    private func getURLRequest(from endpoint: RESTEndpointType) throws -> URLRequest {
         /// We could make force cast due to  `getURLComponents` is returning a valid `URLComponent` with a non nil `URL` or throwing an error.
         var request = URLRequest(url: try getURLComponents(from: endpoint).url!)
 
@@ -33,8 +33,8 @@ public final class RESTClient {
         return request
     }
 
-    private func getURLComponents<Response>(from endpoint: RESTEndpoint<Response>) throws -> URLComponents {
-        guard var URLComponents = URLComponents(string: baseURL) else {
+    private func getURLComponents(from endpoint: RESTEndpointType) throws -> URLComponents {
+        guard var URLComponents = URLComponents(string: baseURL + endpoint.relativePath) else {
             let errorMessage = "Invalid baseURL: \(baseURL)"
             LocalLogger.register(model: LogModel(level: .error, data: errorMessage))
             throw ServiceError.invalidPath(message: errorMessage)
@@ -56,7 +56,7 @@ public final class RESTClient {
         return URLComponents
     }
 
-    private func getHttpBody<Response>(from endpoint: RESTEndpoint<Response>) throws -> Data? {
+    private func getHttpBody(from endpoint: RESTEndpointType) throws -> Data? {
         guard endpoint.contentType == .json, endpoint.method == .post, let params = endpoint.params else {
             return nil
         }
@@ -75,13 +75,16 @@ public final class RESTClient {
 }
 
 extension RESTClient: RESTClientType {
-    public func requestTo<Response: Codable>(endpoint: RESTEndpoint<Response>) -> AnyPublisher<Response, ServiceError> {
+    public func requestTo<Response: Codable>(endpoint: RESTEndpointType, model: Response.Type) -> AnyPublisher<Response, ServiceError> {
         do {
             return URLSession.shared.dataTaskPublisher(for: try getURLRequest(from: endpoint))
                 .retry(2)
                 .tryMap { try self.handleResponse($0) }
                 .decode(type: Response.self, decoder: JSONDecoder())
-                .mapError { ServiceError.decodeError(error: $0) }
+                .mapError {
+                    LocalLogger.register(model: LogModel(level: .error, data: $0))
+                    return ServiceError.decodeError(error: $0)
+                }
                 .eraseToAnyPublisher()
         } catch {
             return Fail(error: error as! ServiceError).eraseToAnyPublisher()

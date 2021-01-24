@@ -11,5 +11,5 @@ import Combine
 public protocol RESTClientType: AnyObject {
     var baseURL: String { get }
 
-    func requestTo<Response: Codable>(endpoint: RESTEndpoint<Response>) -> AnyPublisher<Response, ServiceError>
+    func requestTo<Response: Codable>(endpoint: RESTEndpointType, model: Response.Type) -> AnyPublisher<Response, ServiceError>
 }
