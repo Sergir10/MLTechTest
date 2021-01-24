@@ -26,7 +26,7 @@ final class ProductListRespository {
 }
 
 extension ProductListRespository: ProductListRespositoryType {
-    func searchProduct(by query: String) -> AnyPublisher<String, ServiceError> {
-        client.requestTo(endpoint: endpointForQuery(query), model: String.self)
+    func searchProduct(by query: String) -> AnyPublisher<APIProductList, ServiceError> {
+        client.requestTo(endpoint: endpointForQuery(query), model: APIProductList.self)
     }
 }

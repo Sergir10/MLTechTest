@@ -10,5 +10,5 @@ import Combine
 import MLTechNetwork
 
 protocol ProductListRespositoryType: AnyObject {
-    func searchProduct(by query: String) -> AnyPublisher<String, ServiceError>
+    func searchProduct(by query: String) -> AnyPublisher<APIProductList, ServiceError>
 }
