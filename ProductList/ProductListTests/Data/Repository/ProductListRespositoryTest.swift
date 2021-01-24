@@ -38,17 +38,17 @@ final class ProductListRespositoryTest: XCTestCase {
         let valueExpectation = XCTestExpectation(description: "Wait for value client response.")
 
         /// Setup `Stub client` response.
-        client.response = APIProductList(
-            sort: APICoreSort(identifier: "", name: ""),
-            paging: APICorePaginate(total: 0, primaryResults: 0, offset: 0, limit: 0),
+        client.response = ProductList(
+            sort: CoreSort(identifier: "", name: ""),
+            paging: CorePaginate(offset: 0, limit: 0),
             results: [
-                APIProductListResult(
+                ProductListResult(
                     identifier: "",
                     title: "",
                     price: 0,
                     availableQuantity: 0,
                     thumbnail: "",
-                    shipping: APIShipping(freeShipping: true)),
+                    freeShipping: true),
             ])
 
         sut.searchProduct(by: "").sink(
@@ -62,7 +62,7 @@ final class ProductListRespositoryTest: XCTestCase {
                     XCTAssertTrue(true)
                 }
             },
-            receiveValue: { (_: APIProductList) in
+            receiveValue: { (_: ProductList) in
                 XCTAssertTrue(true)
                 valueExpectation.fulfill()
             }).store(in: &cancelable)
@@ -90,7 +90,7 @@ final class ProductListRespositoryTest: XCTestCase {
                     XCTFail()
                 }
             },
-            receiveValue: { (_: APIProductList) in
+            receiveValue: { (_: ProductList) in
                 XCTFail()
             }).store(in: &cancelable)
 
@@ -112,7 +112,7 @@ final class ProductListRespositoryTest: XCTestCase {
             receiveValue: { _ in }).store(in: &cancelable)
 
         wait(for: [expectation], timeout: 1.0)
-        XCTAssertTrue(sendedType is APIProductList.Type)
+        XCTAssertTrue(sendedType is ProductList.Type)
     }
 
     func testSearchProduct_GivenQuery_ThenHTTPMethodIsGet() {

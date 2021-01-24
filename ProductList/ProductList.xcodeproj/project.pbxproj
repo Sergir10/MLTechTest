@@ -10,6 +10,9 @@
 		77315F4725BE1FB300935032 /* APIProductList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77315F4625BE1FB300935032 /* APIProductList.swift */; };
 		77315F5E25BE264B00935032 /* APIProductListResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77315F5D25BE264B00935032 /* APIProductListResult.swift */; };
 		77315F6125BE265A00935032 /* APIShipping.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77315F6025BE265A00935032 /* APIShipping.swift */; };
+		77315F7525BE292800935032 /* ProductListWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77315F7425BE292800935032 /* ProductListWrapper.swift */; };
+		77315F7925BE297700935032 /* ProductList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77315F7825BE297700935032 /* ProductList.swift */; };
+		77315F8625BE2ABC00935032 /* ProductListResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77315F8525BE2ABC00935032 /* ProductListResult.swift */; };
 		775B0AE125BDE78900BA3A29 /* ProductListRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 775B0AE025BDE78900BA3A29 /* ProductListRepository.swift */; };
 		775B0AE425BDE79F00BA3A29 /* ProductListRespositoryType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 775B0AE325BDE79F00BA3A29 /* ProductListRespositoryType.swift */; };
 		775B0AEA25BDE89F00BA3A29 /* ProductListRespositoryTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 775B0AE925BDE89F00BA3A29 /* ProductListRespositoryTest.swift */; };
@@ -54,6 +57,9 @@
 		77315F4625BE1FB300935032 /* APIProductList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIProductList.swift; sourceTree = "<group>"; };
 		77315F5D25BE264B00935032 /* APIProductListResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIProductListResult.swift; sourceTree = "<group>"; };
 		77315F6025BE265A00935032 /* APIShipping.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIShipping.swift; sourceTree = "<group>"; };
+		77315F7425BE292800935032 /* ProductListWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListWrapper.swift; sourceTree = "<group>"; };
+		77315F7825BE297700935032 /* ProductList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductList.swift; sourceTree = "<group>"; };
+		77315F8525BE2ABC00935032 /* ProductListResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListResult.swift; sourceTree = "<group>"; };
 		775B0AE025BDE78900BA3A29 /* ProductListRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListRepository.swift; sourceTree = "<group>"; };
 		775B0AE325BDE79F00BA3A29 /* ProductListRespositoryType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListRespositoryType.swift; sourceTree = "<group>"; };
 		775B0AE925BDE89F00BA3A29 /* ProductListRespositoryTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListRespositoryTest.swift; sourceTree = "<group>"; };
@@ -117,9 +123,27 @@
 			path = Repository;
 			sourceTree = "<group>";
 		};
+		77315F6B25BE288A00935032 /* Wrapper */ = {
+			isa = PBXGroup;
+			children = (
+				77315F7425BE292800935032 /* ProductListWrapper.swift */,
+			);
+			path = Wrapper;
+			sourceTree = "<group>";
+		};
+		77315F7725BE296200935032 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				77315F7825BE297700935032 /* ProductList.swift */,
+				77315F8525BE2ABC00935032 /* ProductListResult.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		775B0ADD25BDCDB700BA3A29 /* Domain */ = {
 			isa = PBXGroup;
 			children = (
+				77315F7725BE296200935032 /* Model */,
 				77315F4925BE1FC700935032 /* Repository */,
 			);
 			path = Domain;
@@ -128,6 +152,7 @@
 		775B0ADE25BDCE8700BA3A29 /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				77315F6B25BE288A00935032 /* Wrapper */,
 				77315F4525BE1FB300935032 /* APIModel */,
 				775B0AF825BE1EFA00BA3A29 /* Repository */,
 			);
@@ -328,6 +353,9 @@
 				775B0AE425BDE79F00BA3A29 /* ProductListRespositoryType.swift in Sources */,
 				77315F6125BE265A00935032 /* APIShipping.swift in Sources */,
 				77DDAFF325BDB16400B0ED2C /* ProductListPresenter.swift in Sources */,
+				77315F7525BE292800935032 /* ProductListWrapper.swift in Sources */,
+				77315F8625BE2ABC00935032 /* ProductListResult.swift in Sources */,
+				77315F7925BE297700935032 /* ProductList.swift in Sources */,
 				77315F4725BE1FB300935032 /* APIProductList.swift in Sources */,
 				77DDAFEF25BDB16400B0ED2C /* ProductListContract.swift in Sources */,
 			);
