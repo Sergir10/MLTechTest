@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		77554F5625BCF82300F17850 /* MLTechCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 77554F5525BCF82300F17850 /* MLTechCore.framework */; };
+		77554F5725BCF82300F17850 /* MLTechCore.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 77554F5525BCF82300F17850 /* MLTechCore.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		77DDAF2D25BC57C400B0ED2C /* MLTechNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 77DDAF2325BC57C400B0ED2C /* MLTechNetwork.framework */; };
 		77DDAF3F25BC840100B0ED2C /* RESTClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77DDAF3E25BC840100B0ED2C /* RESTClient.swift */; };
 		77DDAF4125BC842A00B0ED2C /* RESTClientTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77DDAF4025BC842A00B0ED2C /* RESTClientTest.swift */; };
@@ -28,7 +30,22 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		77554F5825BCF82300F17850 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				77554F5725BCF82300F17850 /* MLTechCore.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		77554F5525BCF82300F17850 /* MLTechCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = MLTechCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		77DDAF2325BC57C400B0ED2C /* MLTechNetwork.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MLTechNetwork.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		77DDAF2725BC57C400B0ED2C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		77DDAF2C25BC57C400B0ED2C /* MLTechNetworkTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MLTechNetworkTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -48,6 +65,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				77554F5625BCF82300F17850 /* MLTechCore.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -62,12 +80,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		77554F5425BCF82300F17850 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				77554F5525BCF82300F17850 /* MLTechCore.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		77DDAF1925BC57C400B0ED2C = {
 			isa = PBXGroup;
 			children = (
 				77DDAF2525BC57C400B0ED2C /* MLTechNetwork */,
 				77DDAF3025BC57C400B0ED2C /* MLTechNetworkTests */,
 				77DDAF2425BC57C400B0ED2C /* Products */,
+				77554F5425BCF82300F17850 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -157,6 +184,7 @@
 				77DDAF1F25BC57C400B0ED2C /* Sources */,
 				77DDAF2025BC57C400B0ED2C /* Frameworks */,
 				77DDAF2125BC57C400B0ED2C /* Resources */,
+				77554F5825BCF82300F17850 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);

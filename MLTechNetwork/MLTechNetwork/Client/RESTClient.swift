@@ -8,6 +8,7 @@
 
 import Combine
 import Foundation
+import MLTechCore
 
 public final class RESTClient {
     private struct Constant {
@@ -28,23 +29,30 @@ public final class RESTClient {
         request.setValue(endpoint.contentType.rawValue, forHTTPHeaderField: Constant.httpHeader)
         request.httpBody = try getHttpBody(from: endpoint)
 
+        LocalLogger.register(model: LogModel(level: .debug, data: "URLRequest: \(request)"))
         return request
     }
 
     private func getURLComponents<Response>(from endpoint: RESTEndpoint<Response>) throws -> URLComponents {
         guard var URLComponents = URLComponents(string: baseURL) else {
-            throw ServiceError.invalidPath(message: "Invalid baseURL: \(baseURL)")
+            let errorMessage = "Invalid baseURL: \(baseURL)"
+            LocalLogger.register(model: LogModel(level: .error, data: errorMessage))
+            throw ServiceError.invalidPath(message: errorMessage)
         }
 
         guard endpoint.contentType == .URLEncoded else {
+            LocalLogger.register(model: LogModel(level: .debug, data: "URLComponents: \(URLComponents)"))
             return URLComponents
         }
 
         guard let params = endpoint.params as? [String: String] else {
-            throw ServiceError.invalidParams(message: "Invalid format params for URL encoded content type. Params: \(endpoint.params ?? [:])")
+            let errorMessage = "Invalid format params for URL encoded content type. Params: \(endpoint.params ?? [:])"
+            LocalLogger.register(model: LogModel(level: .error, data: errorMessage))
+            throw ServiceError.invalidParams(message: errorMessage)
         }
 
         URLComponents.queryItems = params.map { URLQueryItem(name: $0.0, value: $0.1) }
+        LocalLogger.register(model: LogModel(level: .debug, data: "URLComponents: \(URLComponents)"))
         return URLComponents
     }
 
@@ -61,6 +69,7 @@ public final class RESTClient {
             throw ServiceError.serverError(response: response.response)
         }
 
+        LocalLogger.register(model: LogModel(level: .info, data: "Data Response: \(String(data: response.data, encoding: .utf8) ?? "")"))
         return response.data
     }
 }
