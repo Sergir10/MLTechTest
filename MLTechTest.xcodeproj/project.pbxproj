@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		6CC0B78A996825D45BCB7E6D /* Pods_MLTechTestTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B3E9592A00EB7F513010B8F /* Pods_MLTechTestTests.framework */; };
+		775B0A0125BD035800BA3A29 /* MLApplication.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 775B0A0025BD035800BA3A29 /* MLApplication.framework */; };
+		775B0A0225BD035800BA3A29 /* MLApplication.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 775B0A0025BD035800BA3A29 /* MLApplication.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		7773AB9B25BC54D9004B20DD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7773AB9A25BC54D9004B20DD /* AppDelegate.swift */; };
 		7773AB9D25BC54D9004B20DD /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7773AB9C25BC54D9004B20DD /* SceneDelegate.swift */; };
 		7773AB9F25BC54D9004B20DD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7773AB9E25BC54D9004B20DD /* ViewController.swift */; };
@@ -27,10 +29,25 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		775B0A0325BD035800BA3A29 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				775B0A0225BD035800BA3A29 /* MLApplication.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		30A96A2873CF77F76898484A /* Pods-MLTechTestTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MLTechTestTests.debug.xcconfig"; path = "Target Support Files/Pods-MLTechTestTests/Pods-MLTechTestTests.debug.xcconfig"; sourceTree = "<group>"; };
 		51134DC60ED292BEBEF8BFDF /* Pods-MLTechTestTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MLTechTestTests.release.xcconfig"; path = "Target Support Files/Pods-MLTechTestTests/Pods-MLTechTestTests.release.xcconfig"; sourceTree = "<group>"; };
 		5B3E9592A00EB7F513010B8F /* Pods_MLTechTestTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MLTechTestTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		775B0A0025BD035800BA3A29 /* MLApplication.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = MLApplication.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7773AB9725BC54D9004B20DD /* MLTechTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MLTechTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7773AB9A25BC54D9004B20DD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7773AB9C25BC54D9004B20DD /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -51,6 +68,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				775B0A0125BD035800BA3A29 /* MLApplication.framework in Frameworks */,
 				EC659D031FE63803E2D0A319 /* Pods_MLTechTest.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -122,6 +140,7 @@
 		839D272C0EABB4274147447A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				775B0A0025BD035800BA3A29 /* MLApplication.framework */,
 				B938AFF2546E468E94867877 /* Pods_MLTechTest.framework */,
 				5B3E9592A00EB7F513010B8F /* Pods_MLTechTestTests.framework */,
 			);
@@ -139,6 +158,7 @@
 				7773AB9325BC54D9004B20DD /* Sources */,
 				7773AB9425BC54D9004B20DD /* Frameworks */,
 				7773AB9525BC54D9004B20DD /* Resources */,
+				775B0A0325BD035800BA3A29 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);

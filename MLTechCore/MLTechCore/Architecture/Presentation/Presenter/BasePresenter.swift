@@ -6,14 +6,12 @@
 //  Copyright © 2021 Cebollitas. All rights reserved.
 //
 
-
 import Combine
 import UIKit
 
 open class BasePresenter<ViewController: AnyObject, ViewControllerType>: BasePresenterType {
     private unowned var viewController: ViewController!
 
-    public var baseCoordinator: CoordinatorType
     public var subscriberCancellable = Set<AnyCancellable>()
 
     public var view: ViewControllerType {
@@ -28,9 +26,7 @@ open class BasePresenter<ViewController: AnyObject, ViewControllerType>: BasePre
         viewController = viewType
     }
 
-    public init(coordinator: CoordinatorType) {
-        baseCoordinator = coordinator
-    }
+    public init() {}
 
     // MARK: - These methods could be overridden as needed.
     open func viewDidLoad() {}

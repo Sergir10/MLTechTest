@@ -20,6 +20,48 @@
                ReferencedContainer = "container:MLTechTest.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "77DDAFB525BD01E100B0ED2C"
+               BuildableName = "MLApplication.framework"
+               BlueprintName = "MLApplication"
+               ReferencedContainer = "container:MLApplication/MLApplication.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "77DDAEEB25BC561300B0ED2C"
+               BuildableName = "MLTechCore.framework"
+               BlueprintName = "MLTechCore"
+               ReferencedContainer = "container:MLTechCore/MLTechCore.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "77DDAF2225BC57C400B0ED2C"
+               BuildableName = "MLTechNetwork.framework"
+               BlueprintName = "MLTechNetwork"
+               ReferencedContainer = "container:MLTechNetwork/MLTechNetwork.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
       </BuildActionEntries>
    </BuildAction>
    <TestAction

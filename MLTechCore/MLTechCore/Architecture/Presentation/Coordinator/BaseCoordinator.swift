@@ -8,11 +8,13 @@
 
 import UIKit
 
-open class BaseCoordinator<ParentCoordinator: CoordinatorType>: CoordinatorType {
-    public var parentCoordinator: ParentCoordinator?
+open class BaseCoordinator: CoordinatorType {
+    public var parentCoordinator: CoordinatorType?
+    public var navigationController: UINavigationController
 
-    public init(parentCoordinator: ParentCoordinator? = nil) {
+    public init(parentCoordinator: CoordinatorType? = nil, navigationController: UINavigationController = UINavigationController()) {
         self.parentCoordinator = parentCoordinator
+        self.navigationController = navigationController
     }
 
     open func start() {}
