@@ -54,5 +54,12 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+	<key>BaseURL</key>
+	<dict>
+		<key>debug</key>
+		<string>https://api.mercadolibre.com/sites/MLA/</string>
+		<key>release</key>
+		<string>https://api.mercadolibre.com/sites/MLA/</string>
+	</dict>
 </dict>
 </plist>

@@ -6,10 +6,8 @@
 //  Copyright © 2021 Cebollitas. All rights reserved.
 //
 
-import UIKit
-
 import MLApplication
-import MLTechNetwork
+import UIKit
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     var window: UIWindow?

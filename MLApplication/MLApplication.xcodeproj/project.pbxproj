@@ -17,7 +17,6 @@
 		77DDAFC625BD01E100B0ED2C /* ApplicationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77DDAFC525BD01E100B0ED2C /* ApplicationView.swift */; };
 		77DDAFCD25BD01E200B0ED2C /* MLApplication.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 77DDAFB625BD01E100B0ED2C /* MLApplication.framework */; };
 		77DDAFD225BD01E200B0ED2C /* MLApplicationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77DDAFD125BD01E200B0ED2C /* MLApplicationTests.swift */; };
-		77DDAFD425BD01E200B0ED2C /* MLApplication.h in Headers */ = {isa = PBXBuildFile; fileRef = 77DDAFB925BD01E100B0ED2C /* MLApplication.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,7 +46,6 @@
 /* Begin PBXFileReference section */
 		775B0A0E25BD037600BA3A29 /* MLTechCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = MLTechCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		77DDAFB625BD01E100B0ED2C /* MLApplication.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MLApplication.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		77DDAFB925BD01E100B0ED2C /* MLApplication.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MLApplication.h; sourceTree = "<group>"; };
 		77DDAFBB25BD01E100B0ED2C /* ApplicationConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationConfigurator.swift; sourceTree = "<group>"; };
 		77DDAFBD25BD01E100B0ED2C /* ApplicationContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationContract.swift; sourceTree = "<group>"; };
 		77DDAFBF25BD01E100B0ED2C /* ApplicationCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationCoordinator.swift; sourceTree = "<group>"; };
@@ -110,7 +108,6 @@
 		77DDAFB825BD01E100B0ED2C /* MLApplication */ = {
 			isa = PBXGroup;
 			children = (
-				77DDAFB925BD01E100B0ED2C /* MLApplication.h */,
 				77DDAFC725BD01E100B0ED2C /* Info.plist */,
 				77DDAFBA25BD01E100B0ED2C /* Presentation */,
 			);
@@ -146,7 +143,6 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				77DDAFD425BD01E200B0ED2C /* MLApplication.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -8,9 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		775B09F225BCFFBC00BA3A29 /* LogModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 775B09F125BCFFBC00BA3A29 /* LogModel.swift */; };
+		775B0AA025BD1B1500BA3A29 /* MLEnvironmentType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 775B0A9E25BD1B1500BA3A29 /* MLEnvironmentType.swift */; };
+		775B0AA125BD1B1500BA3A29 /* MLEnvironment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 775B0A9F25BD1B1500BA3A29 /* MLEnvironment.swift */; };
 		77DDAEF625BC561300B0ED2C /* MLTechCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 77DDAEEC25BC561300B0ED2C /* MLTechCore.framework */; };
 		77DDAEFB25BC561300B0ED2C /* MLTechCoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77DDAEFA25BC561300B0ED2C /* MLTechCoreTests.swift */; };
-		77DDAEFD25BC561300B0ED2C /* MLTechCore.h in Headers */ = {isa = PBXBuildFile; fileRef = 77DDAEEF25BC561300B0ED2C /* MLTechCore.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		77DDAF0E25BC572A00B0ED2C /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77DDAF0B25BC572A00B0ED2C /* BaseViewController.swift */; };
 		77DDAF0F25BC572A00B0ED2C /* BaseViewControllerType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77DDAF0C25BC572A00B0ED2C /* BaseViewControllerType.swift */; };
 		77DDAF1025BC572A00B0ED2C /* ViewControllerBindable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77DDAF0D25BC572A00B0ED2C /* ViewControllerBindable.swift */; };
@@ -34,8 +35,9 @@
 
 /* Begin PBXFileReference section */
 		775B09F125BCFFBC00BA3A29 /* LogModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogModel.swift; sourceTree = "<group>"; };
+		775B0A9E25BD1B1500BA3A29 /* MLEnvironmentType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MLEnvironmentType.swift; sourceTree = "<group>"; };
+		775B0A9F25BD1B1500BA3A29 /* MLEnvironment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MLEnvironment.swift; sourceTree = "<group>"; };
 		77DDAEEC25BC561300B0ED2C /* MLTechCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MLTechCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		77DDAEEF25BC561300B0ED2C /* MLTechCore.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MLTechCore.h; sourceTree = "<group>"; };
 		77DDAEF025BC561300B0ED2C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		77DDAEF525BC561300B0ED2C /* MLTechCoreTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MLTechCoreTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		77DDAEFA25BC561300B0ED2C /* MLTechCoreTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MLTechCoreTests.swift; sourceTree = "<group>"; };
@@ -79,6 +81,23 @@
 			path = Local;
 			sourceTree = "<group>";
 		};
+		775B0A9C25BD1AE000BA3A29 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				775B0A9D25BD1B1500BA3A29 /* Environment */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		775B0A9D25BD1B1500BA3A29 /* Environment */ = {
+			isa = PBXGroup;
+			children = (
+				775B0A9E25BD1B1500BA3A29 /* MLEnvironmentType.swift */,
+				775B0A9F25BD1B1500BA3A29 /* MLEnvironment.swift */,
+			);
+			path = Environment;
+			sourceTree = "<group>";
+		};
 		77DDAEE225BC561300B0ED2C = {
 			isa = PBXGroup;
 			children = (
@@ -100,11 +119,11 @@
 		77DDAEEE25BC561300B0ED2C /* MLTechCore */ = {
 			isa = PBXGroup;
 			children = (
-				77DDAEEF25BC561300B0ED2C /* MLTechCore.h */,
 				77DDAEF025BC561300B0ED2C /* Info.plist */,
 				77DDAF0625BC568D00B0ED2C /* Architecture */,
 				77DDAF5425BCE58400B0ED2C /* Extensions */,
 				77DDAF5125BCE3E400B0ED2C /* Logger */,
+				775B0A9C25BD1AE000BA3A29 /* Utils */,
 			);
 			path = MLTechCore;
 			sourceTree = "<group>";
@@ -187,7 +206,6 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				77DDAEFD25BC561300B0ED2C /* MLTechCore.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -290,10 +308,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				775B0AA125BD1B1500BA3A29 /* MLEnvironment.swift in Sources */,
 				77DDAF1825BC573D00B0ED2C /* CoordinatorType.swift in Sources */,
 				77DDAF1425BC573300B0ED2C /* BasePresenterType.swift in Sources */,
 				77DDAF1725BC573D00B0ED2C /* BaseCoordinator.swift in Sources */,
 				77DDAF1025BC572A00B0ED2C /* ViewControllerBindable.swift in Sources */,
+				775B0AA025BD1B1500BA3A29 /* MLEnvironmentType.swift in Sources */,
 				77DDAF1325BC573300B0ED2C /* BasePresenter.swift in Sources */,
 				77DDAF0E25BC572A00B0ED2C /* BaseViewController.swift in Sources */,
 				77DDAF0F25BC572A00B0ED2C /* BaseViewControllerType.swift in Sources */,
