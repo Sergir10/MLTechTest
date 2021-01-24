@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		775B09F225BCFFBC00BA3A29 /* LogModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 775B09F125BCFFBC00BA3A29 /* LogModel.swift */; };
 		77DDAEF625BC561300B0ED2C /* MLTechCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 77DDAEEC25BC561300B0ED2C /* MLTechCore.framework */; };
 		77DDAEFB25BC561300B0ED2C /* MLTechCoreTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77DDAEFA25BC561300B0ED2C /* MLTechCoreTests.swift */; };
 		77DDAEFD25BC561300B0ED2C /* MLTechCore.h in Headers */ = {isa = PBXBuildFile; fileRef = 77DDAEEF25BC561300B0ED2C /* MLTechCore.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -17,7 +18,7 @@
 		77DDAF1425BC573300B0ED2C /* BasePresenterType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77DDAF1225BC573300B0ED2C /* BasePresenterType.swift */; };
 		77DDAF1725BC573D00B0ED2C /* BaseCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77DDAF1525BC573D00B0ED2C /* BaseCoordinator.swift */; };
 		77DDAF1825BC573D00B0ED2C /* CoordinatorType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77DDAF1625BC573D00B0ED2C /* CoordinatorType.swift */; };
-		77DDAF5325BCE42A00B0ED2C /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77DDAF5225BCE42A00B0ED2C /* Logger.swift */; };
+		77DDAF5325BCE42A00B0ED2C /* LocalLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77DDAF5225BCE42A00B0ED2C /* LocalLogger.swift */; };
 		77DDAF5625BCE59200B0ED2C /* Date+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77DDAF5525BCE59200B0ED2C /* Date+Extension.swift */; };
 /* End PBXBuildFile section */
 
@@ -32,6 +33,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		775B09F125BCFFBC00BA3A29 /* LogModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogModel.swift; sourceTree = "<group>"; };
 		77DDAEEC25BC561300B0ED2C /* MLTechCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MLTechCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		77DDAEEF25BC561300B0ED2C /* MLTechCore.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MLTechCore.h; sourceTree = "<group>"; };
 		77DDAEF025BC561300B0ED2C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -45,7 +47,7 @@
 		77DDAF1225BC573300B0ED2C /* BasePresenterType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BasePresenterType.swift; sourceTree = "<group>"; };
 		77DDAF1525BC573D00B0ED2C /* BaseCoordinator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseCoordinator.swift; sourceTree = "<group>"; };
 		77DDAF1625BC573D00B0ED2C /* CoordinatorType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoordinatorType.swift; sourceTree = "<group>"; };
-		77DDAF5225BCE42A00B0ED2C /* Logger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
+		77DDAF5225BCE42A00B0ED2C /* LocalLogger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalLogger.swift; sourceTree = "<group>"; };
 		77DDAF5525BCE59200B0ED2C /* Date+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -68,6 +70,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		775B09F025BCFFB500BA3A29 /* Local */ = {
+			isa = PBXGroup;
+			children = (
+				77DDAF5225BCE42A00B0ED2C /* LocalLogger.swift */,
+				775B09F125BCFFBC00BA3A29 /* LogModel.swift */,
+			);
+			path = Local;
+			sourceTree = "<group>";
+		};
 		77DDAEE225BC561300B0ED2C = {
 			isa = PBXGroup;
 			children = (
@@ -89,11 +100,11 @@
 		77DDAEEE25BC561300B0ED2C /* MLTechCore */ = {
 			isa = PBXGroup;
 			children = (
-				77DDAF5425BCE58400B0ED2C /* Extensions */,
-				77DDAF5125BCE3E400B0ED2C /* Log */,
-				77DDAF0625BC568D00B0ED2C /* Architecture */,
 				77DDAEEF25BC561300B0ED2C /* MLTechCore.h */,
 				77DDAEF025BC561300B0ED2C /* Info.plist */,
+				77DDAF0625BC568D00B0ED2C /* Architecture */,
+				77DDAF5425BCE58400B0ED2C /* Extensions */,
+				77DDAF5125BCE3E400B0ED2C /* Logger */,
 			);
 			path = MLTechCore;
 			sourceTree = "<group>";
@@ -153,12 +164,12 @@
 			path = View;
 			sourceTree = "<group>";
 		};
-		77DDAF5125BCE3E400B0ED2C /* Log */ = {
+		77DDAF5125BCE3E400B0ED2C /* Logger */ = {
 			isa = PBXGroup;
 			children = (
-				77DDAF5225BCE42A00B0ED2C /* Logger.swift */,
+				775B09F025BCFFB500BA3A29 /* Local */,
 			);
-			path = Log;
+			path = Logger;
 			sourceTree = "<group>";
 		};
 		77DDAF5425BCE58400B0ED2C /* Extensions */ = {
@@ -286,7 +297,8 @@
 				77DDAF1325BC573300B0ED2C /* BasePresenter.swift in Sources */,
 				77DDAF0E25BC572A00B0ED2C /* BaseViewController.swift in Sources */,
 				77DDAF0F25BC572A00B0ED2C /* BaseViewControllerType.swift in Sources */,
-				77DDAF5325BCE42A00B0ED2C /* Logger.swift in Sources */,
+				77DDAF5325BCE42A00B0ED2C /* LocalLogger.swift in Sources */,
+				775B09F225BCFFBC00BA3A29 /* LogModel.swift in Sources */,
 				77DDAF5625BCE59200B0ED2C /* Date+Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
