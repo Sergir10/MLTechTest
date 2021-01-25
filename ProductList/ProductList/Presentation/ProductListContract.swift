@@ -13,4 +13,6 @@ protocol ProductListViewControllerType: AnyObject {}
 
 protocol ProductListPresenterType: Bindable {}
 
-protocol ProductListViewType: UIView {}
+protocol ProductListViewType: UIView {
+    var productCollectionView: UICollectionView { get }
+}

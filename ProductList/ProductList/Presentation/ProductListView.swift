@@ -10,6 +10,23 @@ import MLTechCore
 import UIKit
 
 final class ProductListView: UIView, ProductListViewType {
+    lazy var productCollectionView: UICollectionView = {
+        let view = UICollectionView(frame: .zero, collectionViewLayout: self.layout)
+        view.backgroundColor = .gray
+        view.showsHorizontalScrollIndicator = false
+        view.isPagingEnabled = false
+
+        view.translatesAutoresizingMaskIntoConstraints = false
+        return view
+    }()
+
+    lazy var layout: UICollectionViewFlowLayout = {
+        let layout = UICollectionViewFlowLayout()
+        layout.scrollDirection = .horizontal
+
+        return layout
+    }()
+
     override init(frame: CGRect) {
         super.init(frame: frame)
         initialSetup()
@@ -19,5 +36,18 @@ final class ProductListView: UIView, ProductListViewType {
         fatalError("init(coder:) has not been implemented")
     }
 
-    private func initialSetup() {}
+    private func initialSetup() {
+        addSubview(productCollectionView)
+
+        setupConstraints()
+    }
+
+    private func setupConstraints() {
+        NSLayoutConstraint.activate([
+            productCollectionView.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor),
+            productCollectionView.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor, constant: -10),
+            productCollectionView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 10),
+            productCollectionView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -10)
+        ])
+    }
 }

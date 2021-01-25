@@ -7,16 +7,24 @@
 //
 
 import MLTechCore
+import UIKit
 
 final class ProductListViewController: BaseViewController<ProductListPresenterType, ProductListViewType> {
+    private var collectionViewDataSource: ProductCollectionViewDataSource!
 
     override func loadView() {
         view = ProductListView()
     }
 
     override func viewDidLoad() {
+        initialSetup()
         super.viewDidLoad()
-        customView.backgroundColor = .red
+    }
+
+    private func initialSetup() {
+        collectionViewDataSource = ProductCollectionViewDataSource(
+            collectionView: customView.productCollectionView,
+            sections: [])
     }
 }
 

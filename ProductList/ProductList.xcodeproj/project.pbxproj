@@ -14,6 +14,10 @@
 		77315F7925BE297700935032 /* ProductList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77315F7825BE297700935032 /* ProductList.swift */; };
 		77315F8625BE2ABC00935032 /* ProductListResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77315F8525BE2ABC00935032 /* ProductListResult.swift */; };
 		77315F9325BE43D200935032 /* SearchProductUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77315F9225BE43D200935032 /* SearchProductUseCase.swift */; };
+		77315FC725BE702A00935032 /* ProductCollectionViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77315FC625BE702A00935032 /* ProductCollectionViewDataSource.swift */; };
+		77315FCA25BE703F00935032 /* ProducListSectionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77315FC925BE703F00935032 /* ProducListSectionViewModel.swift */; };
+		77315FCD25BE705300935032 /* ProducListCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77315FCC25BE705300935032 /* ProducListCellViewModel.swift */; };
+		77315FD025BE708300935032 /* ProducListCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77315FCF25BE708300935032 /* ProducListCollectionViewCell.swift */; };
 		775B0AE125BDE78900BA3A29 /* ProductListRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 775B0AE025BDE78900BA3A29 /* ProductListRepository.swift */; };
 		775B0AE425BDE79F00BA3A29 /* ProductRespositoryType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 775B0AE325BDE79F00BA3A29 /* ProductRespositoryType.swift */; };
 		775B0AEA25BDE89F00BA3A29 /* ProductListRespositoryTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 775B0AE925BDE89F00BA3A29 /* ProductListRespositoryTest.swift */; };
@@ -62,6 +66,10 @@
 		77315F7825BE297700935032 /* ProductList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductList.swift; sourceTree = "<group>"; };
 		77315F8525BE2ABC00935032 /* ProductListResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListResult.swift; sourceTree = "<group>"; };
 		77315F9225BE43D200935032 /* SearchProductUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchProductUseCase.swift; sourceTree = "<group>"; };
+		77315FC625BE702A00935032 /* ProductCollectionViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCollectionViewDataSource.swift; sourceTree = "<group>"; };
+		77315FC925BE703F00935032 /* ProducListSectionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProducListSectionViewModel.swift; sourceTree = "<group>"; };
+		77315FCC25BE705300935032 /* ProducListCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProducListCellViewModel.swift; sourceTree = "<group>"; };
+		77315FCF25BE708300935032 /* ProducListCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProducListCollectionViewCell.swift; sourceTree = "<group>"; };
 		775B0AE025BDE78900BA3A29 /* ProductListRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListRepository.swift; sourceTree = "<group>"; };
 		775B0AE325BDE79F00BA3A29 /* ProductRespositoryType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductRespositoryType.swift; sourceTree = "<group>"; };
 		775B0AE925BDE89F00BA3A29 /* ProductListRespositoryTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListRespositoryTest.swift; sourceTree = "<group>"; };
@@ -153,6 +161,10 @@
 		77315F9E25BE5E7500935032 /* CollectionView */ = {
 			isa = PBXGroup;
 			children = (
+				77315FC625BE702A00935032 /* ProductCollectionViewDataSource.swift */,
+				77315FC925BE703F00935032 /* ProducListSectionViewModel.swift */,
+				77315FCC25BE705300935032 /* ProducListCellViewModel.swift */,
+				77315FCF25BE708300935032 /* ProducListCollectionViewCell.swift */,
 			);
 			path = CollectionView;
 			sourceTree = "<group>";
@@ -370,13 +382,17 @@
 				77315F5E25BE264B00935032 /* APIProductListResult.swift in Sources */,
 				775B0AE125BDE78900BA3A29 /* ProductListRepository.swift in Sources */,
 				775B0AE425BDE79F00BA3A29 /* ProductRespositoryType.swift in Sources */,
+				77315FC725BE702A00935032 /* ProductCollectionViewDataSource.swift in Sources */,
 				77315F6125BE265A00935032 /* APIShipping.swift in Sources */,
 				77DDAFF325BDB16400B0ED2C /* ProductListPresenter.swift in Sources */,
+				77315FD025BE708300935032 /* ProducListCollectionViewCell.swift in Sources */,
 				77315F7525BE292800935032 /* ProductListWrapper.swift in Sources */,
+				77315FCA25BE703F00935032 /* ProducListSectionViewModel.swift in Sources */,
 				77315F9325BE43D200935032 /* SearchProductUseCase.swift in Sources */,
 				77315F8625BE2ABC00935032 /* ProductListResult.swift in Sources */,
 				77315F7925BE297700935032 /* ProductList.swift in Sources */,
 				77315F4725BE1FB300935032 /* APIProductList.swift in Sources */,
+				77315FCD25BE705300935032 /* ProducListCellViewModel.swift in Sources */,
 				77DDAFEF25BDB16400B0ED2C /* ProductListContract.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
