@@ -63,6 +63,4 @@ open class BaseCollectionView<T: SectionType, U: CellConfigurable>: CollectionVi
     open func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
         return 0
     }
-
-    open func scrollViewDidScroll(_: UIScrollView) {}
 }

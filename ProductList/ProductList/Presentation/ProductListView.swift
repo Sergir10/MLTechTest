@@ -12,8 +12,7 @@ import UIKit
 final class ProductListView: UIView, ProductListViewType {
     lazy var productCollectionView: UICollectionView = {
         let view = UICollectionView(frame: .zero, collectionViewLayout: self.layout)
-        view.backgroundColor = .gray
-        view.showsHorizontalScrollIndicator = false
+        view.backgroundColor = .white
         view.isPagingEnabled = false
 
         view.translatesAutoresizingMaskIntoConstraints = false
@@ -22,7 +21,6 @@ final class ProductListView: UIView, ProductListViewType {
 
     lazy var layout: UICollectionViewFlowLayout = {
         let layout = UICollectionViewFlowLayout()
-        layout.scrollDirection = .horizontal
 
         return layout
     }()
@@ -46,8 +44,8 @@ final class ProductListView: UIView, ProductListViewType {
         NSLayoutConstraint.activate([
             productCollectionView.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor),
             productCollectionView.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor, constant: -10),
-            productCollectionView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 10),
-            productCollectionView.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -10)
+            productCollectionView.leadingAnchor.constraint(equalTo: safeAreaLayoutGuide.leadingAnchor, constant: 10),
+            productCollectionView.trailingAnchor.constraint(equalTo: safeAreaLayoutGuide.trailingAnchor, constant: -10),
         ])
     }
 }

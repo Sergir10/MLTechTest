@@ -8,4 +8,10 @@
 
 import Foundation
 
-struct ProducListCellViewModel: Hashable & Equatable {}
+struct ProducListCellViewModel: Hashable & Equatable {
+    let title: String
+    let price: Int
+    let availableQuantity: Int
+    let thumbnail: String
+    let freeShipping: Bool
+}

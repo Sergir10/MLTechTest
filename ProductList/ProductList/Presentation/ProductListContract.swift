@@ -9,7 +9,9 @@
 import MLTechCore
 import UIKit
 
-protocol ProductListViewControllerType: AnyObject {}
+protocol ProductListViewControllerType: AnyObject {
+    func showProduct(_ productSections: [ProductListSectionViewModel])
+}
 
 protocol ProductListPresenterType: Bindable {}
 

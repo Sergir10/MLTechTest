@@ -1,5 +1,5 @@
 //
-//  ProducListSectionViewModel.swift
+//  ProductListSectionViewModel.swift
 //  ProductList
 //
 //  Created by Sergio Giraldo on 24/01/21.
@@ -8,7 +8,7 @@
 
 import MLTechCore
 
-struct ProducListSectionViewModel: SectionType {
+struct ProductListSectionViewModel: SectionType {
     var title: String
     var data: [ProducListCellViewModel]
 }

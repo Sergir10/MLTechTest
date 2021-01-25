@@ -28,4 +28,8 @@ final class ProductListViewController: BaseViewController<ProductListPresenterTy
     }
 }
 
-extension ProductListViewController: ProductListViewControllerType {}
+extension ProductListViewController: ProductListViewControllerType {
+    func showProduct(_ productSections: [ProductListSectionViewModel]) {
+        collectionViewDataSource.sections = productSections
+    }
+}

@@ -29,10 +29,27 @@ final class ProductListPresenter: BasePresenter<ProductListViewController, Produ
         dependencies.searchProductUseCase.execute(
             params: "iPhone",
             onSuccess: { value in
-                print("FIRST RESULT: \(value.results.first!)")
+                self.showProducts(value.results)
             },
             onError: { _ in },
             onFinished: {})
+    }
+
+    private func showProducts(_ products: [ProductListResult]) {
+        let section = ProductListSectionViewModel(
+            title: "Serched",
+            data: products.map(trasnformProductEntity(_:)))
+
+        view.showProduct([section])
+    }
+
+    private func trasnformProductEntity(_ product: ProductListResult) -> ProducListCellViewModel {
+        return ProducListCellViewModel(
+            title: product.title,
+            price: product.price,
+            availableQuantity: product.availableQuantity,
+            thumbnail: product.thumbnail,
+            freeShipping: product.freeShipping)
     }
 }
 
