@@ -14,6 +14,12 @@
 		77315F8225BE2A6900935032 /* CorePaginate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77315F8125BE2A6900935032 /* CorePaginate.swift */; };
 		77315F8C25BE3BA600935032 /* UseCaseType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77315F8B25BE3BA600935032 /* UseCaseType.swift */; };
 		77315F9925BE4D2F00935032 /* InterfaceError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77315F9825BE4D2F00935032 /* InterfaceError.swift */; };
+		77315FA225BE5F4600935032 /* BaseCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77315FA125BE5F4600935032 /* BaseCollectionView.swift */; };
+		77315FAA25BE5F8000935032 /* SectionType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77315FA925BE5F8000935032 /* SectionType.swift */; };
+		77315FB125BE5FBA00935032 /* CellConfigurable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77315FB025BE5FBA00935032 /* CellConfigurable.swift */; };
+		77315FB725BE5FD400935032 /* CellReusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77315FB625BE5FD400935032 /* CellReusable.swift */; };
+		77315FBB25BE602800935032 /* ContainerConfigurable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77315FBA25BE602800935032 /* ContainerConfigurable.swift */; };
+		77315FC325BE60AB00935032 /* UICollectionView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77315FC225BE60AB00935032 /* UICollectionView+Extension.swift */; };
 		775B09F225BCFFBC00BA3A29 /* LogModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 775B09F125BCFFBC00BA3A29 /* LogModel.swift */; };
 		775B0AA025BD1B1500BA3A29 /* MLEnvironmentType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 775B0A9E25BD1B1500BA3A29 /* MLEnvironmentType.swift */; };
 		775B0AA125BD1B1500BA3A29 /* MLEnvironment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 775B0A9F25BD1B1500BA3A29 /* MLEnvironment.swift */; };
@@ -49,6 +55,12 @@
 		77315F8125BE2A6900935032 /* CorePaginate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CorePaginate.swift; sourceTree = "<group>"; };
 		77315F8B25BE3BA600935032 /* UseCaseType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UseCaseType.swift; sourceTree = "<group>"; };
 		77315F9825BE4D2F00935032 /* InterfaceError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfaceError.swift; sourceTree = "<group>"; };
+		77315FA125BE5F4600935032 /* BaseCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseCollectionView.swift; sourceTree = "<group>"; };
+		77315FA925BE5F8000935032 /* SectionType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionType.swift; sourceTree = "<group>"; };
+		77315FB025BE5FBA00935032 /* CellConfigurable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellConfigurable.swift; sourceTree = "<group>"; };
+		77315FB625BE5FD400935032 /* CellReusable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellReusable.swift; sourceTree = "<group>"; };
+		77315FBA25BE602800935032 /* ContainerConfigurable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainerConfigurable.swift; sourceTree = "<group>"; };
+		77315FC225BE60AB00935032 /* UICollectionView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+Extension.swift"; sourceTree = "<group>"; };
 		775B09F125BCFFBC00BA3A29 /* LogModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogModel.swift; sourceTree = "<group>"; };
 		775B0A9E25BD1B1500BA3A29 /* MLEnvironmentType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MLEnvironmentType.swift; sourceTree = "<group>"; };
 		775B0A9F25BD1B1500BA3A29 /* MLEnvironment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MLEnvironment.swift; sourceTree = "<group>"; };
@@ -149,6 +161,34 @@
 			path = Error;
 			sourceTree = "<group>";
 		};
+		77315F9F25BE5F0800935032 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				77315FA825BE5F5E00935032 /* Containers */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		77315FA025BE5F1400935032 /* CollectionView */ = {
+			isa = PBXGroup;
+			children = (
+				77315FA125BE5F4600935032 /* BaseCollectionView.swift */,
+			);
+			path = CollectionView;
+			sourceTree = "<group>";
+		};
+		77315FA825BE5F5E00935032 /* Containers */ = {
+			isa = PBXGroup;
+			children = (
+				77315FB025BE5FBA00935032 /* CellConfigurable.swift */,
+				77315FB625BE5FD400935032 /* CellReusable.swift */,
+				77315FBA25BE602800935032 /* ContainerConfigurable.swift */,
+				77315FA925BE5F8000935032 /* SectionType.swift */,
+				77315FA025BE5F1400935032 /* CollectionView */,
+			);
+			path = Containers;
+			sourceTree = "<group>";
+		};
 		775B09F025BCFFB500BA3A29 /* Local */ = {
 			isa = PBXGroup;
 			children = (
@@ -208,6 +248,7 @@
 			children = (
 				77DDAEF025BC561300B0ED2C /* Info.plist */,
 				77DDAF0625BC568D00B0ED2C /* Architecture */,
+				77315F9F25BE5F0800935032 /* Components */,
 				775B0A9C25BD1AE000BA3A29 /* Utils */,
 			);
 			path = MLTechCore;
@@ -283,6 +324,7 @@
 			isa = PBXGroup;
 			children = (
 				77DDAF5525BCE59200B0ED2C /* Date+Extension.swift */,
+				77315FC225BE60AB00935032 /* UICollectionView+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -399,9 +441,13 @@
 				775B0AA125BD1B1500BA3A29 /* MLEnvironment.swift in Sources */,
 				77315F5A25BE25C900935032 /* APISort.swift in Sources */,
 				77DDAF1825BC573D00B0ED2C /* CoordinatorType.swift in Sources */,
+				77315FAA25BE5F8000935032 /* SectionType.swift in Sources */,
+				77315FB125BE5FBA00935032 /* CellConfigurable.swift in Sources */,
 				77DDAF1425BC573300B0ED2C /* BasePresenterType.swift in Sources */,
+				77315FC325BE60AB00935032 /* UICollectionView+Extension.swift in Sources */,
 				77DDAF1725BC573D00B0ED2C /* BaseCoordinator.swift in Sources */,
 				77DDAF1025BC572A00B0ED2C /* ViewControllerBindable.swift in Sources */,
+				77315FB725BE5FD400935032 /* CellReusable.swift in Sources */,
 				77315F7E25BE2A4800935032 /* CoreSort.swift in Sources */,
 				77315F5625BE246200935032 /* APIPaginate.swift in Sources */,
 				775B0AA025BD1B1500BA3A29 /* MLEnvironmentType.swift in Sources */,
@@ -410,6 +456,8 @@
 				77315F6E25BE28B100935032 /* WrapperType.swift in Sources */,
 				77DDAF1325BC573300B0ED2C /* BasePresenter.swift in Sources */,
 				77DDAF0E25BC572A00B0ED2C /* BaseViewController.swift in Sources */,
+				77315FBB25BE602800935032 /* ContainerConfigurable.swift in Sources */,
+				77315FA225BE5F4600935032 /* BaseCollectionView.swift in Sources */,
 				77DDAF0F25BC572A00B0ED2C /* BaseViewControllerType.swift in Sources */,
 				77DDAF5325BCE42A00B0ED2C /* LocalLogger.swift in Sources */,
 				775B09F225BCFFBC00BA3A29 /* LogModel.swift in Sources */,

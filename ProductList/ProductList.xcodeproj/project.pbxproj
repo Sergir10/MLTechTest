@@ -150,6 +150,13 @@
 			path = UseCase;
 			sourceTree = "<group>";
 		};
+		77315F9E25BE5E7500935032 /* CollectionView */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = CollectionView;
+			sourceTree = "<group>";
+		};
 		775B0ADD25BDCDB700BA3A29 /* Domain */ = {
 			isa = PBXGroup;
 			children = (
@@ -222,8 +229,9 @@
 				77DDAFEC25BDB16400B0ED2C /* ProductListConfigurator.swift */,
 				77DDAFEE25BDB16400B0ED2C /* ProductListContract.swift */,
 				77DDAFF225BDB16400B0ED2C /* ProductListPresenter.swift */,
-				77DDAFF425BDB16400B0ED2C /* ProductListViewController.swift */,
 				77DDAFF625BDB16400B0ED2C /* ProductListView.swift */,
+				77DDAFF425BDB16400B0ED2C /* ProductListViewController.swift */,
+				77315F9E25BE5E7500935032 /* CollectionView */,
 			);
 			path = Presentation;
 			sourceTree = "<group>";
