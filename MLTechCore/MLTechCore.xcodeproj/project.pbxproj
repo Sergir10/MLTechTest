@@ -161,6 +161,7 @@
 		775B0A9C25BD1AE000BA3A29 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				77DDAF5425BCE58400B0ED2C /* Extensions */,
 				77DDAF5125BCE3E400B0ED2C /* Logger */,
 				775B0A9D25BD1B1500BA3A29 /* Environment */,
 			);
@@ -207,7 +208,6 @@
 			children = (
 				77DDAEF025BC561300B0ED2C /* Info.plist */,
 				77DDAF0625BC568D00B0ED2C /* Architecture */,
-				77DDAF5425BCE58400B0ED2C /* Extensions */,
 				775B0A9C25BD1AE000BA3A29 /* Utils */,
 			);
 			path = MLTechCore;
