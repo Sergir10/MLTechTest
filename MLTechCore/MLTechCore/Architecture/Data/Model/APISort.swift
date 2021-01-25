@@ -16,4 +16,9 @@ public struct APICoreSort: Codable {
         self.identifier = identifier
         self.name = name
     }
+    
+    enum CodingKeys: String, CodingKey {
+        case identifier = "id"
+        case name
+    }
 }

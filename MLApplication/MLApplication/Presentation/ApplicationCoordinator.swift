@@ -37,8 +37,8 @@ public final class ApplicationCoordinator: BaseCoordinator {
 extension ApplicationCoordinator: ApplicationCoordinatorType {
     public func runProductListModule() {
         let module = ProductListConfigurator.getModule(
-            moduleInput: ProductListConfigurator.ModuleInput(coordinator: self))
-        
+            moduleInput: ProductListConfigurator.ModuleInput(coordinator: self, client: restClient))
+
         navigationController.setViewControllers([module], animated: false)
     }
 

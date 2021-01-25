@@ -14,7 +14,7 @@ import XCTest
 @testable import ProductList
 
 final class ProductListRespositoryTest: XCTestCase {
-    private var sut: ProductListRespositoryType!
+    private var sut: ProductRespositoryType!
     private var clientSpy: RESTClientSpy!
     private var client: RESTClientStub!
     private var cancelable = Set<AnyCancellable>()
@@ -24,7 +24,7 @@ final class ProductListRespositoryTest: XCTestCase {
 
         client = RESTClientStub(baseURL: "baseURL")
         clientSpy = RESTClientSpy()
-        sut = ProductListRespository(client: client)
+        sut = ProductRespository(client: client)
     }
 
     override func tearDown() {
@@ -106,7 +106,7 @@ final class ProductListRespositoryTest: XCTestCase {
             expectation.fulfill()
         }
 
-        sut = ProductListRespository(client: clientSpy)
+        sut = ProductRespository(client: clientSpy)
         sut.searchProduct(by: "").sink(
             receiveCompletion: { _ in },
             receiveValue: { _ in }).store(in: &cancelable)
@@ -124,7 +124,7 @@ final class ProductListRespositoryTest: XCTestCase {
             expectation.fulfill()
         }
 
-        sut = ProductListRespository(client: clientSpy)
+        sut = ProductRespository(client: clientSpy)
         sut.searchProduct(by: "").sink(
             receiveCompletion: { _ in },
             receiveValue: { _ in }).store(in: &cancelable)
@@ -142,7 +142,7 @@ final class ProductListRespositoryTest: XCTestCase {
             expectation.fulfill()
         }
 
-        sut = ProductListRespository(client: clientSpy)
+        sut = ProductRespository(client: clientSpy)
         sut.searchProduct(by: "").sink(
             receiveCompletion: { _ in },
             receiveValue: { _ in }).store(in: &cancelable)
@@ -160,7 +160,7 @@ final class ProductListRespositoryTest: XCTestCase {
             expectation.fulfill()
         }
 
-        sut = ProductListRespository(client: clientSpy)
+        sut = ProductRespository(client: clientSpy)
         sut.searchProduct(by: "").sink(
             receiveCompletion: { _ in },
             receiveValue: { _ in }).store(in: &cancelable)

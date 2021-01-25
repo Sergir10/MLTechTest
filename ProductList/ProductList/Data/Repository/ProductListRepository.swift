@@ -9,7 +9,7 @@
 import Combine
 import MLTechNetwork
 
-final class ProductListRespository {
+final class ProductRespository {
     private struct Constant {
         static let relativePath = "/sites/MCO/search"
     }
@@ -34,7 +34,7 @@ final class ProductListRespository {
     }
 }
 
-extension ProductListRespository: ProductListRespositoryType {
+extension ProductRespository: ProductRespositoryType {
     func searchProduct(by query: String) -> AnyPublisher<ProductList, ServiceError> {
         client.requestTo(endpoint: endpointForQuery(query), model: APIProductList.self)
             .flatMap { self.mapData($0) }

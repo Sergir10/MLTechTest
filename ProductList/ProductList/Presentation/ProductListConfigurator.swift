@@ -7,12 +7,15 @@
 //
 
 import MLTechCore
+import MLTechNetwork
 import UIKit
 
 public final class ProductListConfigurator {
     public static func getModule(moduleInput: ProductListConfigurator.ModuleInput) -> UIViewController {
         let presenter = ProductListPresenter(
-            dependencies: ProductListPresenter.Dependencies(coordinator: moduleInput.coordinator))
+            dependencies: ProductListPresenter.Dependencies(
+                coordinator: moduleInput.coordinator,
+                searchProductUseCase: SearchProductUseCase(productRepository: ProductRespository(client: moduleInput.client))))
 
         let viewController = ProductListViewController(presenter: presenter)
         viewController.modalPresentationStyle = .fullScreen
@@ -24,9 +27,11 @@ public final class ProductListConfigurator {
 extension ProductListConfigurator {
     public struct ModuleInput {
         let coordinator: ProductListCoordinatorType
+        let client: RESTClientType
 
-        public init(coordinator: ProductListCoordinatorType) {
+        public init(coordinator: ProductListCoordinatorType, client: RESTClientType) {
             self.coordinator = coordinator
+            self.client = client
         }
     }
 }

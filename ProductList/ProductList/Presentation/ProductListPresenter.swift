@@ -11,6 +11,7 @@ import MLTechCore
 final class ProductListPresenter: BasePresenter<ProductListViewController, ProductListViewControllerType> {
     struct Dependencies {
         var coordinator: ProductListCoordinatorType
+        var searchProductUseCase: BaseUseCase<ProductList, String>
     }
 
     private let dependencies: Dependencies
@@ -18,6 +19,20 @@ final class ProductListPresenter: BasePresenter<ProductListViewController, Produ
     init(dependencies: Dependencies) {
         self.dependencies = dependencies
         super.init()
+    }
+
+    override func viewDidLoad() {
+        searchProduct()
+    }
+
+    private func searchProduct() {
+        dependencies.searchProductUseCase.execute(
+            params: "iPhone",
+            onSuccess: { value in
+                print("FIRST RESULT: \(value.results.first!)")
+            },
+            onError: { _ in },
+            onFinished: {})
     }
 }
 
