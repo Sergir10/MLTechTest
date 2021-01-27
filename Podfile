@@ -7,24 +7,22 @@ target 'MLTechTest' do
   use_frameworks!
 
   # Pods for MLTechTest
+  pod 'Kingfisher', '~> 6.0'
 
   target 'MLTechTestTests' do
     inherit! :search_paths
     # Pods for testing
   end
 
-end
-
-target 'MLTechNetwork' do
-  project 'MLTechNetwork/MLTechNetwork'
-  use_frameworks!
-
-  # Pods for MLTechNetwork
-  pod 'Kingfisher'
-
-  target 'MLTechNetworkTests' do
-    inherit! :search_paths
-    # Pods for testing
-  end
+  target 'MLTechCore' do
+    project 'MLTechCore/MLTechCore'
+    use_frameworks!
   
+    target 'MLTechCoreTests' do
+      inherit! :search_paths
+      # Pods for testing
+    end
+    
+  end
+
 end
