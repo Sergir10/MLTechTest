@@ -29,13 +29,6 @@ final class ProductListView: UIView, ProductListViewType {
         return view
     }()
 
-    private lazy var navigationBarColor: UIView = {
-        let view = UIView(frame: .zero)
-
-        view.translatesAutoresizingMaskIntoConstraints = false
-        return view
-    }()
-
     lazy var searchProductBar: UISearchBar = {
         let view = UISearchBar(frame: .zero)
         view.layer.borderWidth = 1
@@ -51,7 +44,15 @@ final class ProductListView: UIView, ProductListViewType {
     lazy var descriptionLabel: UILabel = {
         let view = UILabel(frame: .zero)
         view.font = UIFont.systemFont(ofSize: 14, weight: .bold)
-//        view.isHidden = true
+
+        view.translatesAutoresizingMaskIntoConstraints = false
+        return view
+    }()
+
+    lazy var searchComponent: SearchComponentViewType = {
+        let view = SearchComponentView(frame: .zero)
+        view.setTitle("Buscar Mercado Libre")
+        view.setDescription("Encuentra tus productos favoritos.")
 
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
@@ -96,7 +97,7 @@ final class ProductListView: UIView, ProductListViewType {
         setupSearchProductBar()
         setupDescriptionLabel()
         setupProductCollectionView()
-        setupNavigationBarColor()
+        setupSearchComponent()
         setupSearchBackgroundView()
     }
 
@@ -156,15 +157,12 @@ final class ProductListView: UIView, ProductListViewType {
         ])
     }
 
-    private func setupNavigationBarColor() {
-        addSubview(navigationBarColor)
-        sendSubviewToBack(navigationBarColor)
+    private func setupSearchComponent() {
+        addSubview(searchComponent)
 
         NSLayoutConstraint.activate([
-            navigationBarColor.topAnchor.constraint(equalTo: topAnchor),
-            navigationBarColor.bottomAnchor.constraint(equalTo: searchProductBar.bottomAnchor),
-            navigationBarColor.leadingAnchor.constraint(equalTo: leadingAnchor),
-            navigationBarColor.trailingAnchor.constraint(equalTo: trailingAnchor),
+            searchComponent.centerXAnchor.constraint(equalTo: centerXAnchor),
+            searchComponent.centerYAnchor.constraint(equalTo: centerYAnchor, constant: -50),
         ])
     }
 
@@ -172,7 +170,7 @@ final class ProductListView: UIView, ProductListViewType {
         addSubview(searchBackgroundView)
 
         NSLayoutConstraint.activate([
-            searchBackgroundView.topAnchor.constraint(equalTo: descriptionLabel.bottomAnchor),
+            searchBackgroundView.topAnchor.constraint(equalTo: searchProductBar.bottomAnchor),
             searchBackgroundView.bottomAnchor.constraint(equalTo: bottomAnchor),
             searchBackgroundView.leadingAnchor.constraint(equalTo: leadingAnchor),
             searchBackgroundView.trailingAnchor.constraint(equalTo: trailingAnchor),
@@ -188,6 +186,16 @@ extension ProductListView {
             options: .transitionCrossDissolve,
             animations: {
                 self.searchBackgroundView.isHidden = hide
+        })
+    }
+
+    func hideSearchView(hide: Bool, from view: UIView) {
+        UIView.transition(
+            with: view,
+            duration: 0.3,
+            options: .transitionCrossDissolve,
+            animations: {
+                self.searchComponent.isHidden = hide
         })
     }
 }

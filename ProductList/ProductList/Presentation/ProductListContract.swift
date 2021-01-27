@@ -11,6 +11,7 @@ import UIKit
 
 protocol ProductListViewControllerType: AnyObject, UISearchBarDelegate {
     func showProduct(_ productSections: [ProductListSectionViewModel])
+    func setDescriptionTitle(_ title: String)
 }
 
 protocol ProductListPresenterType: Bindable {
@@ -21,6 +22,9 @@ protocol ProductListViewType: UIView {
     var productCollectionView: UICollectionView { get }
     var searchProductBar: UISearchBar { get }
     var searchBackgroundView: UIView { get }
-    
+    var descriptionLabel: UILabel { get }
+    var searchComponent: SearchComponentViewType { get }
+
     func hideBackgroundView(hide: Bool, from view: UIView)
-} 
+    func hideSearchView(hide: Bool, from view: UIView)
+}

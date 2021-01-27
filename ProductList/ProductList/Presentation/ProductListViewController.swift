@@ -33,6 +33,10 @@ extension ProductListViewController: ProductListViewControllerType {
     func showProduct(_ productSections: [ProductListSectionViewModel]) {
         collectionViewDataSource.sections = productSections
     }
+    
+    func setDescriptionTitle(_ title: String) {
+        customView.descriptionLabel.text = title
+    }
 
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         guard let query = searchBar.text else {
@@ -42,11 +46,11 @@ extension ProductListViewController: ProductListViewControllerType {
         customView.searchProductBar.resignFirstResponder()
         presenter.searchBarSearchButtonClicked(with: query)
         customView.hideBackgroundView(hide: true, from: view)
+        customView.hideSearchView(hide: true, from: view)
     }
 
     func searchBarTextDidBeginEditing(_: UISearchBar) {
         customView.searchProductBar.setShowsCancelButton(true, animated: true)
-
         customView.hideBackgroundView(hide: false, from: customView.searchBackgroundView)
     }
 

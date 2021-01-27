@@ -37,10 +37,11 @@ final class ProductListPresenter: BasePresenter<ProductListViewController, Produ
 
     private func showProducts(_ products: [ProductListResult]) {
         let section = ProductListSectionViewModel(
-            title: "Serched",
+            title: "",
             data: products.map(trasnformProductEntity(_:)))
 
         view.showProduct([section])
+        view.setDescriptionTitle("Artículos encontrados.")
     }
 
     private func trasnformProductEntity(_ product: ProductListResult) -> ProducListCellViewModel {

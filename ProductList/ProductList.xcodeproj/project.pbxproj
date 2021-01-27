@@ -21,6 +21,7 @@
 		775B0AE125BDE78900BA3A29 /* ProductListRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 775B0AE025BDE78900BA3A29 /* ProductListRepository.swift */; };
 		775B0AE425BDE79F00BA3A29 /* ProductRespositoryType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 775B0AE325BDE79F00BA3A29 /* ProductRespositoryType.swift */; };
 		775B0AEA25BDE89F00BA3A29 /* ProductListRespositoryTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 775B0AE925BDE89F00BA3A29 /* ProductListRespositoryTest.swift */; };
+		77B34B8125C12922000F464C /* SearchComponentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77B34B8025C12922000F464C /* SearchComponentView.swift */; };
 		77DDAFED25BDB16400B0ED2C /* ProductListConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77DDAFEC25BDB16400B0ED2C /* ProductListConfigurator.swift */; };
 		77DDAFEF25BDB16400B0ED2C /* ProductListContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77DDAFEE25BDB16400B0ED2C /* ProductListContract.swift */; };
 		77DDAFF325BDB16400B0ED2C /* ProductListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77DDAFF225BDB16400B0ED2C /* ProductListPresenter.swift */; };
@@ -73,6 +74,7 @@
 		775B0AE025BDE78900BA3A29 /* ProductListRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListRepository.swift; sourceTree = "<group>"; };
 		775B0AE325BDE79F00BA3A29 /* ProductRespositoryType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductRespositoryType.swift; sourceTree = "<group>"; };
 		775B0AE925BDE89F00BA3A29 /* ProductListRespositoryTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListRespositoryTest.swift; sourceTree = "<group>"; };
+		77B34B8025C12922000F464C /* SearchComponentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchComponentView.swift; sourceTree = "<group>"; };
 		77DDAFE725BDB16400B0ED2C /* ProductList.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = ProductList.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		77DDAFEC25BDB16400B0ED2C /* ProductListConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListConfigurator.swift; sourceTree = "<group>"; };
 		77DDAFEE25BDB16400B0ED2C /* ProductListContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListContract.swift; sourceTree = "<group>"; };
@@ -205,6 +207,14 @@
 			path = Repository;
 			sourceTree = "<group>";
 		};
+		77B34B7F25C128F7000F464C /* ComponentView */ = {
+			isa = PBXGroup;
+			children = (
+				77B34B8025C12922000F464C /* SearchComponentView.swift */,
+			);
+			path = ComponentView;
+			sourceTree = "<group>";
+		};
 		77DDAFDD25BDB16300B0ED2C = {
 			isa = PBXGroup;
 			children = (
@@ -244,6 +254,7 @@
 				77DDAFF625BDB16400B0ED2C /* ProductListView.swift */,
 				77DDAFF425BDB16400B0ED2C /* ProductListViewController.swift */,
 				77315F9E25BE5E7500935032 /* CollectionView */,
+				77B34B7F25C128F7000F464C /* ComponentView */,
 			);
 			path = Presentation;
 			sourceTree = "<group>";
@@ -384,6 +395,7 @@
 				775B0AE425BDE79F00BA3A29 /* ProductRespositoryType.swift in Sources */,
 				77315FC725BE702A00935032 /* ProductCollectionViewDataSource.swift in Sources */,
 				77315F6125BE265A00935032 /* APIShipping.swift in Sources */,
+				77B34B8125C12922000F464C /* SearchComponentView.swift in Sources */,
 				77DDAFF325BDB16400B0ED2C /* ProductListPresenter.swift in Sources */,
 				77315FD025BE708300935032 /* ProducListCollectionViewCell.swift in Sources */,
 				77315F7525BE292800935032 /* ProductListWrapper.swift in Sources */,
