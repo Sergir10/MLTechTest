@@ -9,7 +9,7 @@
 import MLTechCore
 import UIKit
 
-protocol ProductListViewControllerType: AnyObject {
+protocol ProductListViewControllerType: AnyObject, UISearchBarDelegate {
     func showProduct(_ productSections: [ProductListSectionViewModel])
 }
 
@@ -17,4 +17,5 @@ protocol ProductListPresenterType: Bindable {}
 
 protocol ProductListViewType: UIView {
     var productCollectionView: UICollectionView { get }
-}
+    var searchProductBar: UISearchBar { get }
+} 

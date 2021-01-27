@@ -32,4 +32,19 @@ extension ProductListViewController: ProductListViewControllerType {
     func showProduct(_ productSections: [ProductListSectionViewModel]) {
         collectionViewDataSource.sections = productSections
     }
+
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        print(searchBar)
+        print(searchText)
+    }
+
+    func searchBarTextDidBeginEditing(_: UISearchBar) {
+        customView.searchProductBar.showsCancelButton = true
+    }
+
+    func searchBarCancelButtonClicked(_: UISearchBar) {
+        customView.searchProductBar.showsCancelButton = false
+        customView.searchProductBar.text = ""
+        customView.searchProductBar.resignFirstResponder()
+    }
 }

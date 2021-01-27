@@ -16,7 +16,6 @@ target 'MLTechTest' do
 
   target 'MLTechCore' do
     project 'MLTechCore/MLTechCore'
-    use_frameworks!
   
     target 'MLTechCoreTests' do
       inherit! :search_paths
