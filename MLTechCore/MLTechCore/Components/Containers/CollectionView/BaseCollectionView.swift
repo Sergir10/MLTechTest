@@ -48,7 +48,7 @@ open class BaseCollectionView<T: SectionType, U: CellConfigurable>: CollectionVi
     open func updateDataSource() {
         var snapshot = NSDiffableDataSourceSnapshot<T, T.DataType>()
         snapshot.appendSections(sections)
-        sections.forEach { snapshot.appendItems($0.data) }
+        sections.forEach { snapshot.appendItems($0.data, toSection: $0) }
 
         DispatchQueue.main.async {
             self.dataSource.apply(snapshot, animatingDifferences: false)

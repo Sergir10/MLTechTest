@@ -48,6 +48,24 @@ final class ProductListView: UIView, ProductListViewType {
         return view
     }()
 
+    lazy var descriptionLabel: UILabel = {
+        let view = UILabel(frame: .zero)
+        view.font = UIFont.systemFont(ofSize: 14, weight: .bold)
+//        view.isHidden = true
+
+        view.translatesAutoresizingMaskIntoConstraints = false
+        return view
+    }()
+
+    lazy var searchBackgroundView: UIView = {
+        let view = UIView(frame: .zero)
+        view.backgroundColor = .white
+        view.isHidden = true
+
+        view.translatesAutoresizingMaskIntoConstraints = false
+        return view
+    }()
+
     lazy var productCollectionView: UICollectionView = {
         let view = UICollectionView(frame: .zero, collectionViewLayout: self.layout)
         view.backgroundColor = .white
@@ -76,8 +94,10 @@ final class ProductListView: UIView, ProductListViewType {
         setupScrollContainerView()
         setupContainerView()
         setupSearchProductBar()
+        setupDescriptionLabel()
         setupProductCollectionView()
         setupNavigationBarColor()
+        setupSearchBackgroundView()
     }
 
     private func setupScrollContainerView() {
@@ -115,11 +135,21 @@ final class ProductListView: UIView, ProductListViewType {
         ])
     }
 
+    private func setupDescriptionLabel() {
+        containerView.addSubview(descriptionLabel)
+
+        NSLayoutConstraint.activate([
+            descriptionLabel.topAnchor.constraint(equalTo: searchProductBar.bottomAnchor, constant: 10),
+            descriptionLabel.leadingAnchor.constraint(equalTo: containerView.leadingAnchor, constant: 10),
+            descriptionLabel.trailingAnchor.constraint(equalTo: containerView.trailingAnchor),
+        ])
+    }
+
     private func setupProductCollectionView() {
         containerView.addSubview(productCollectionView)
 
         NSLayoutConstraint.activate([
-            productCollectionView.topAnchor.constraint(equalTo: searchProductBar.bottomAnchor),
+            productCollectionView.topAnchor.constraint(equalTo: descriptionLabel.bottomAnchor, constant: 10),
             productCollectionView.bottomAnchor.constraint(equalTo: containerView.bottomAnchor),
             productCollectionView.leadingAnchor.constraint(equalTo: containerView.leadingAnchor),
             productCollectionView.trailingAnchor.constraint(equalTo: containerView.trailingAnchor),
@@ -136,5 +166,28 @@ final class ProductListView: UIView, ProductListViewType {
             navigationBarColor.leadingAnchor.constraint(equalTo: leadingAnchor),
             navigationBarColor.trailingAnchor.constraint(equalTo: trailingAnchor),
         ])
+    }
+
+    private func setupSearchBackgroundView() {
+        addSubview(searchBackgroundView)
+
+        NSLayoutConstraint.activate([
+            searchBackgroundView.topAnchor.constraint(equalTo: descriptionLabel.bottomAnchor),
+            searchBackgroundView.bottomAnchor.constraint(equalTo: bottomAnchor),
+            searchBackgroundView.leadingAnchor.constraint(equalTo: leadingAnchor),
+            searchBackgroundView.trailingAnchor.constraint(equalTo: trailingAnchor),
+        ])
+    }
+}
+
+extension ProductListView {
+    func hideBackgroundView(hide: Bool, from view: UIView) {
+        UIView.transition(
+            with: view,
+            duration: 0.3,
+            options: .transitionCrossDissolve,
+            animations: {
+                self.searchBackgroundView.isHidden = hide
+        })
     }
 }

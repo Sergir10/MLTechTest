@@ -41,15 +41,19 @@ extension ProductListViewController: ProductListViewControllerType {
 
         customView.searchProductBar.resignFirstResponder()
         presenter.searchBarSearchButtonClicked(with: query)
+        customView.hideBackgroundView(hide: true, from: view)
     }
 
     func searchBarTextDidBeginEditing(_: UISearchBar) {
         customView.searchProductBar.setShowsCancelButton(true, animated: true)
+
+        customView.hideBackgroundView(hide: false, from: customView.searchBackgroundView)
     }
 
     func searchBarCancelButtonClicked(_: UISearchBar) {
         customView.searchProductBar.setShowsCancelButton(false, animated: true)
         customView.searchProductBar.text = ""
         customView.searchProductBar.resignFirstResponder()
+        customView.hideBackgroundView(hide: true, from: view)
     }
 }

@@ -11,6 +11,7 @@ import Foundation
 public protocol SectionType: Hashable {
     associatedtype DataType: Equatable & Hashable
     
+    var identifier: UUID { get }
     var title: String { get }
     var data: [DataType] { get }
 }

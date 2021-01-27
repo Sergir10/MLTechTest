@@ -7,8 +7,10 @@
 //
 
 import MLTechCore
+import Foundation
 
 struct ProductListSectionViewModel: SectionType {
+    var identifier: UUID = UUID()
     var title: String
     var data: [ProducListCellViewModel]
 }

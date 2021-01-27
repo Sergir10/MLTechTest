@@ -22,12 +22,12 @@ final class ProductListPresenter: BasePresenter<ProductListViewController, Produ
     }
 
     override func viewDidLoad() {
-//        searchProduct()
+        
     }
 
     private func searchProduct(by name: String) {
         dependencies.searchProductUseCase.execute(
-            params: "iPhone",
+            params: name,
             onSuccess: { value in
                 self.showProducts(value.results)
             },

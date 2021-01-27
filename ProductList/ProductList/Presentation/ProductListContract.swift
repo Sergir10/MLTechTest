@@ -20,4 +20,7 @@ protocol ProductListPresenterType: Bindable {
 protocol ProductListViewType: UIView {
     var productCollectionView: UICollectionView { get }
     var searchProductBar: UISearchBar { get }
+    var searchBackgroundView: UIView { get }
+    
+    func hideBackgroundView(hide: Bool, from view: UIView)
 } 
