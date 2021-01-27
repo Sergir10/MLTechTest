@@ -23,11 +23,7 @@ public struct LocalLogger {
     }
 
     private static func log(level: OSLogType, message: String) {
-        if #available(iOS 14, *) {
-            Logger().log(level: level, "\(message)")
-        } else {
-            os_log("%@", type: level, message)
-        }
+        os_log("%@", type: level, message)
     }
 
     private static func sourceFileName(filePath: String) -> String {

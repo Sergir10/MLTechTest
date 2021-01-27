@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		14D247384FC50A4EBDFED75C /* Pods_MLTechNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 12442E165D62A046AFB1FFD0 /* Pods_MLTechNetwork.framework */; };
 		77554F5625BCF82300F17850 /* MLTechCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 77554F5525BCF82300F17850 /* MLTechCore.framework */; };
 		77554F5725BCF82300F17850 /* MLTechCore.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 77554F5525BCF82300F17850 /* MLTechCore.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		775B0AEF25BDEA6C00BA3A29 /* RESTClientStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 775B0AEE25BDEA6C00BA3A29 /* RESTClientStub.swift */; };
@@ -21,6 +22,7 @@
 		77DDAF4C25BC925400B0ED2C /* RESTContentType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77DDAF4B25BC925400B0ED2C /* RESTContentType.swift */; };
 		77DDAF4E25BC92F200B0ED2C /* RESTClientType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77DDAF4D25BC92F200B0ED2C /* RESTClientType.swift */; };
 		77DDAF5025BC978D00B0ED2C /* RESTEndpointType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77DDAF4F25BC978D00B0ED2C /* RESTEndpointType.swift */; };
+		F340B2A7A53C3AD304F932D3 /* Pods_MLTechNetworkTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2312974D4629E7532F854B72 /* Pods_MLTechNetworkTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +50,12 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		0D8FD219864026F64E7E63C4 /* Pods-MLTechNetwork.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MLTechNetwork.release.xcconfig"; path = "Target Support Files/Pods-MLTechNetwork/Pods-MLTechNetwork.release.xcconfig"; sourceTree = "<group>"; };
+		0FF429792932443A024ED2F0 /* Pods-MLTechNetwork.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MLTechNetwork.debug.xcconfig"; path = "Target Support Files/Pods-MLTechNetwork/Pods-MLTechNetwork.debug.xcconfig"; sourceTree = "<group>"; };
+		12442E165D62A046AFB1FFD0 /* Pods_MLTechNetwork.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MLTechNetwork.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2312974D4629E7532F854B72 /* Pods_MLTechNetworkTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MLTechNetworkTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2A4EDCDDF0350A4DCBA12654 /* Pods-MLTechNetworkTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MLTechNetworkTests.debug.xcconfig"; path = "Target Support Files/Pods-MLTechNetworkTests/Pods-MLTechNetworkTests.debug.xcconfig"; sourceTree = "<group>"; };
+		2C2368B4BFDCAA2750CDF29B /* Pods-MLTechNetworkTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MLTechNetworkTests.release.xcconfig"; path = "Target Support Files/Pods-MLTechNetworkTests/Pods-MLTechNetworkTests.release.xcconfig"; sourceTree = "<group>"; };
 		77554F5525BCF82300F17850 /* MLTechCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = MLTechCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		775B0AEE25BDEA6C00BA3A29 /* RESTClientStub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RESTClientStub.swift; sourceTree = "<group>"; };
 		775B0AF225BDF17C00BA3A29 /* EndpointDummy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndpointDummy.swift; sourceTree = "<group>"; };
@@ -72,6 +80,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				77554F5625BCF82300F17850 /* MLTechCore.framework in Frameworks */,
+				14D247384FC50A4EBDFED75C /* Pods_MLTechNetwork.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -80,6 +89,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				77DDAF2D25BC57C400B0ED2C /* MLTechNetwork.framework in Frameworks */,
+				F340B2A7A53C3AD304F932D3 /* Pods_MLTechNetworkTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -90,6 +100,8 @@
 			isa = PBXGroup;
 			children = (
 				77554F5525BCF82300F17850 /* MLTechCore.framework */,
+				12442E165D62A046AFB1FFD0 /* Pods_MLTechNetwork.framework */,
+				2312974D4629E7532F854B72 /* Pods_MLTechNetworkTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -111,6 +123,7 @@
 				77DDAF3025BC57C400B0ED2C /* MLTechNetworkTests */,
 				77DDAF2425BC57C400B0ED2C /* Products */,
 				77554F5425BCF82300F17850 /* Frameworks */,
+				C84FE68F315579EDEE49A69C /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -180,6 +193,18 @@
 			path = Endpoint;
 			sourceTree = "<group>";
 		};
+		C84FE68F315579EDEE49A69C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				0FF429792932443A024ED2F0 /* Pods-MLTechNetwork.debug.xcconfig */,
+				0D8FD219864026F64E7E63C4 /* Pods-MLTechNetwork.release.xcconfig */,
+				2A4EDCDDF0350A4DCBA12654 /* Pods-MLTechNetworkTests.debug.xcconfig */,
+				2C2368B4BFDCAA2750CDF29B /* Pods-MLTechNetworkTests.release.xcconfig */,
+			);
+			name = Pods;
+			path = ../Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -197,6 +222,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 77DDAF3725BC57C400B0ED2C /* Build configuration list for PBXNativeTarget "MLTechNetwork" */;
 			buildPhases = (
+				812EA507DA3B6E3A11596F7D /* [CP] Check Pods Manifest.lock */,
 				77DDAF1E25BC57C400B0ED2C /* Headers */,
 				77DDAF1F25BC57C400B0ED2C /* Sources */,
 				77DDAF2025BC57C400B0ED2C /* Frameworks */,
@@ -216,6 +242,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 77DDAF3A25BC57C400B0ED2C /* Build configuration list for PBXNativeTarget "MLTechNetworkTests" */;
 			buildPhases = (
+				D19BF0A74A46226CE861A611 /* [CP] Check Pods Manifest.lock */,
 				77DDAF2825BC57C400B0ED2C /* Sources */,
 				77DDAF2925BC57C400B0ED2C /* Frameworks */,
 				77DDAF2A25BC57C400B0ED2C /* Resources */,
@@ -285,6 +312,53 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		812EA507DA3B6E3A11596F7D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MLTechNetwork-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D19BF0A74A46226CE861A611 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MLTechNetworkTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		77DDAF1F25BC57C400B0ED2C /* Sources */ = {
@@ -447,6 +521,7 @@
 		};
 		77DDAF3825BC57C400B0ED2C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0FF429792932443A024ED2F0 /* Pods-MLTechNetwork.debug.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -475,6 +550,7 @@
 		};
 		77DDAF3925BC57C400B0ED2C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0D8FD219864026F64E7E63C4 /* Pods-MLTechNetwork.release.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -502,6 +578,7 @@
 		};
 		77DDAF3B25BC57C400B0ED2C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2A4EDCDDF0350A4DCBA12654 /* Pods-MLTechNetworkTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CLANG_ENABLE_MODULES = YES;
@@ -523,6 +600,7 @@
 		};
 		77DDAF3C25BC57C400B0ED2C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2C2368B4BFDCAA2750CDF29B /* Pods-MLTechNetworkTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CLANG_ENABLE_MODULES = YES;
