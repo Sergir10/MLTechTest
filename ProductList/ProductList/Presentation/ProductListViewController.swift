@@ -22,6 +22,7 @@ final class ProductListViewController: BaseViewController<ProductListPresenterTy
     }
 
     private func initialSetup() {
+        customView.searchProductBar.delegate = self
         collectionViewDataSource = ProductCollectionViewDataSource(
             collectionView: customView.productCollectionView,
             sections: [])
@@ -33,17 +34,21 @@ extension ProductListViewController: ProductListViewControllerType {
         collectionViewDataSource.sections = productSections
     }
 
-    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-        print(searchBar)
-        print(searchText)
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        guard let query = searchBar.text else {
+            return
+        }
+
+        customView.searchProductBar.resignFirstResponder()
+        presenter.searchBarSearchButtonClicked(with: query)
     }
 
     func searchBarTextDidBeginEditing(_: UISearchBar) {
-        customView.searchProductBar.showsCancelButton = true
+        customView.searchProductBar.setShowsCancelButton(true, animated: true)
     }
 
     func searchBarCancelButtonClicked(_: UISearchBar) {
-        customView.searchProductBar.showsCancelButton = false
+        customView.searchProductBar.setShowsCancelButton(false, animated: true)
         customView.searchProductBar.text = ""
         customView.searchProductBar.resignFirstResponder()
     }

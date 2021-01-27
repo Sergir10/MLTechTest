@@ -13,7 +13,9 @@ protocol ProductListViewControllerType: AnyObject, UISearchBarDelegate {
     func showProduct(_ productSections: [ProductListSectionViewModel])
 }
 
-protocol ProductListPresenterType: Bindable {}
+protocol ProductListPresenterType: Bindable {
+    func searchBarSearchButtonClicked(with text: String)
+}
 
 protocol ProductListViewType: UIView {
     var productCollectionView: UICollectionView { get }

@@ -22,10 +22,10 @@ final class ProductListPresenter: BasePresenter<ProductListViewController, Produ
     }
 
     override func viewDidLoad() {
-        searchProduct()
+//        searchProduct()
     }
 
-    private func searchProduct() {
+    private func searchProduct(by name: String) {
         dependencies.searchProductUseCase.execute(
             params: "iPhone",
             onSuccess: { value in
@@ -53,4 +53,9 @@ final class ProductListPresenter: BasePresenter<ProductListViewController, Produ
     }
 }
 
-extension ProductListPresenter: ProductListPresenterType {}
+extension ProductListPresenter: ProductListPresenterType {
+    func searchBarSearchButtonClicked(with text: String) {
+        searchProduct(by: text)
+    }
+}
+
