@@ -21,27 +21,37 @@ final class ProductListPresenter: BasePresenter<ProductListViewController, Produ
         super.init()
     }
 
-    override func viewDidLoad() {
-        
-    }
+    override func viewDidLoad() {}
 
     private func searchProduct(by name: String) {
         dependencies.searchProductUseCase.execute(
             params: name,
-            onSuccess: { value in
-                self.showProducts(value.results)
+            onSuccess: { productList in
+                self.processProductList(productList)
             },
             onError: { _ in },
             onFinished: {})
     }
 
-    private func showProducts(_ products: [ProductListResult]) {
-        let section = ProductListSectionViewModel(
-            title: "",
-            data: products.map(trasnformProductEntity(_:)))
+    private func processProductList(_ productsList: ProductList) {
+        if productsList.results.isEmpty {
+            showEmptyView()
+        } else {
+            showProducts(productsList.results)
+        }
+    }
 
-        view.showProduct([section])
+    private func showProducts(_ products: [ProductListResult]) {
+        view.showProduct(getFormattedProducts(from: products))
         view.setDescriptionTitle("Artículos encontrados.")
+    }
+
+    private func showEmptyView() {
+        view.showEmptyState(getFormattedProducts(from: nil), message: "Producto no encontrado, intente de nuevo.")
+    }
+
+    private func getFormattedProducts(from products: [ProductListResult]?) -> ProductListSectionViewModel {
+        return ProductListSectionViewModel(title: "", data: products?.map(trasnformProductEntity(_:)) ?? [])
     }
 
     private func trasnformProductEntity(_ product: ProductListResult) -> ProducListCellViewModel {
@@ -59,4 +69,3 @@ extension ProductListPresenter: ProductListPresenterType {
         searchProduct(by: text)
     }
 }
-

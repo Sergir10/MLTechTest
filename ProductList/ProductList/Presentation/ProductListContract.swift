@@ -10,7 +10,8 @@ import MLTechCore
 import UIKit
 
 protocol ProductListViewControllerType: AnyObject, UISearchBarDelegate {
-    func showProduct(_ productSections: [ProductListSectionViewModel])
+    func showProduct(_ productSection: ProductListSectionViewModel)
+    func showEmptyState(_ productSection: ProductListSectionViewModel, message: String)
     func setDescriptionTitle(_ title: String)
 }
 

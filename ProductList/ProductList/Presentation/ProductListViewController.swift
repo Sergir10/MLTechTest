@@ -30,8 +30,14 @@ final class ProductListViewController: BaseViewController<ProductListPresenterTy
 }
 
 extension ProductListViewController: ProductListViewControllerType {
-    func showProduct(_ productSections: [ProductListSectionViewModel]) {
-        collectionViewDataSource.sections = productSections
+    func showProduct(_ productSection: ProductListSectionViewModel) {
+        collectionViewDataSource.sections = [productSection]
+    }
+    
+    func showEmptyState(_ productSection: ProductListSectionViewModel, message: String) {
+        collectionViewDataSource.sections = [productSection]
+        customView.hideSearchView(hide: false, from: view)
+        customView.searchComponent.setDescription(message)
     }
     
     func setDescriptionTitle(_ title: String) {
