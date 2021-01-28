@@ -9,7 +9,7 @@
 import MLTechCore
 import UIKit
 
-protocol ProductListViewControllerType: ItemCellSelectable, UISearchBarDelegate {
+protocol ProductListViewControllerType: ItemCellSelectable, ErrorShowable, UISearchBarDelegate {
     func showProduct(_ productSection: ProductListSectionViewModel)
     func showEmptyState(_ productSection: ProductListSectionViewModel, message: String)
     func setDescriptionTitle(_ title: String)

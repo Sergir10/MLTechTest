@@ -31,7 +31,9 @@ final class ProductListPresenter: BasePresenter<ProductListViewController, Produ
             onSuccess: { productList in
                 self.processProductList(productList)
             },
-            onError: { _ in },
+            onError: { error in
+                self.view.presentError(error)
+            },
             onFinished: {})
     }
 

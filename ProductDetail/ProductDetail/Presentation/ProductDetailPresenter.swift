@@ -33,8 +33,8 @@ final class ProductDetailPresenter: BasePresenter<ProductDetailViewController, P
             onSuccess: { product in
                 self.showProduct(product)
             },
-            onError: { _ in
-
+            onError: { error in
+                self.view.presentError(error)
             },
             onFinished: {})
     }

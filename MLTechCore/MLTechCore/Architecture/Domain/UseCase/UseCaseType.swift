@@ -13,7 +13,7 @@ public protocol UseCaseType: AnyObject {
     associatedtype Response
     associatedtype Params
 
-    func execute(params: Params, onSuccess: @escaping (Response) -> Void, onError: ((Error) -> Void)?, onFinished: (() -> Void)?)
+    func execute(params: Params, onSuccess: @escaping (Response) -> Void, onError: ((InterfaceError) -> Void)?, onFinished: (() -> Void)?)
 }
 
 open class BaseUseCase<R, P>: UseCaseType {
@@ -23,7 +23,7 @@ open class BaseUseCase<R, P>: UseCaseType {
     private var cancelable = Set<AnyCancellable>()
     public init() {}
 
-    public func execute(params: Params, onSuccess: @escaping (Response) -> Void, onError: ((Error) -> Void)?, onFinished: (() -> Void)?) {
+    public func execute(params: Params, onSuccess: @escaping (Response) -> Void, onError: ((InterfaceError) -> Void)?, onFinished: (() -> Void)?) {
         buildUseCase(params: params)
             .receive(on: DispatchQueue.main)
             .eraseToAnyPublisher()

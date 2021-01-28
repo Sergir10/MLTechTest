@@ -56,4 +56,9 @@ open class BaseViewController<PresenterType, ViewType>: UIViewController, BaseVi
         super.viewDidDisappear(animated)
         bindablePresenter.viewDidDisappear()
     }
+
+    // MARK: - Error
+    public func presentError(_ error: InterfaceError) {
+        error.showError { self.present($0, animated: true, completion: nil) }
+    }
 }
