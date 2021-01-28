@@ -69,4 +69,6 @@ open class BaseCollectionView<T: SectionType, U: CellConfigurable>: CollectionVi
     open func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         delegate?.didSelectItem(at: indexPath)
     }
+    
+    open func scrollViewDidScroll(_ scrollView: UIScrollView) {}
 }

@@ -6,6 +6,7 @@
 //  Copyright © 2021 Cebollitas. All rights reserved.
 //
 
+import Foundation
 import MLTechCore
 
 final class ProductDetailPresenter: BasePresenter<ProductDetailViewController, ProductDetailViewControllerType> {
@@ -22,7 +23,44 @@ final class ProductDetailPresenter: BasePresenter<ProductDetailViewController, P
         super.init()
     }
 
-    override func viewDidLoad() {}
+    override func viewDidLoad() {
+        loadProduct()
+    }
+
+    private func loadProduct() {
+        dependencies.getProductByIdUseCase.execute(
+            params: dependencies.productId,
+            onSuccess: { product in
+                self.showProduct(product)
+            },
+            onError: { _ in
+
+            },
+            onFinished: {})
+    }
+
+    private func showProduct(_ product: Product) {
+        setupImageComponent(with: product.pictures)
+        setupFormattedPrice(product.price, currencyId: product.currencyId)
+        view.setupView(from: product)
+    }
+
+    private func setupImageComponent(with pictures: [Picture]) {
+        let section = ImagePagerSectionViewModel(
+            title: "",
+            data: pictures.map { ImagePagerCellViewModel(imageURL: $0.secureUrl) })
+
+        view.setupImagePager(with: [section])
+    }
+
+    private func setupFormattedPrice(_ price: Double, currencyId: String) {
+        guard let formattedPrice = NSNumber(floatLiteral: price).toLocalCurrency() else {
+            view.setupPrice("$ \(price)  \(currencyId)")
+            return
+        }
+
+        view.setupPrice(formattedPrice + "  " + currencyId)
+    }
 }
 
 extension ProductDetailPresenter: ProductDetailPresenterType {}

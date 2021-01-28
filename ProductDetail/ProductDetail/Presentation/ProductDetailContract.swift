@@ -9,8 +9,18 @@
 import MLTechCore
 import UIKit
 
-protocol ProductDetailViewControllerType: AnyObject {}
+protocol ProductDetailViewControllerType: AnyObject {
+    func setupView(from model: Product)
+    func setupImagePager(with sections: [ImagePagerSectionViewModel])
+    func setupPrice(_ price: String)
+}
 
 protocol ProductDetailPresenterType: Bindable {}
 
-protocol ProductDetailViewType: UIView {}
+protocol ProductDetailViewType: UIView {
+    var conditionLabel: UILabel { get }
+    var titleLabel: UILabel { get }
+    var imagePagerCollection: UICollectionView { get }
+    var priceLabel: UILabel { get }
+    var pagerControl: UIPageControl { get }
+}

@@ -20,6 +20,11 @@ final class ProductListViewController: BaseViewController<ProductListPresenterTy
         initialSetup()
         super.viewDidLoad()
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.setNavigationBarHidden(true, animated: false)
+    }
 
     private func initialSetup() {
         customView.searchProductBar.delegate = self
@@ -67,7 +72,7 @@ extension ProductListViewController: ProductListViewControllerType {
         customView.searchProductBar.resignFirstResponder()
         customView.hideBackgroundView(hide: true, from: view)
     }
-    
+
     func didSelectItem(at indexPath: IndexPath) {
         presenter.selectedItem(at: indexPath)
     }

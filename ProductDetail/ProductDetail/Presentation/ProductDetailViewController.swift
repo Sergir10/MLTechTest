@@ -1,4 +1,4 @@
-//
+    //
 //  ProductDetailViewController.swift
 //  ProductDetail
 //
@@ -10,14 +10,37 @@ import MLTechCore
 import UIKit
 
 final class ProductDetailViewController: BaseViewController<ProductDetailPresenterType, ProductDetailViewType> {
+    private var imagePagerCollectionDataSource: ImagePagerDataSource!
 
     override func loadView() {
         view = ProductDetailView()
     }
 
     override func viewDidLoad() {
+        initialSetup()
         super.viewDidLoad()
+        navigationController?.navigationBar.barTintColor = Theme.Color.primary
+    }
+
+    private func initialSetup() {
+        imagePagerCollectionDataSource = ImagePagerDataSource(
+            collectionView: customView.imagePagerCollection,
+            pagerControl: customView.pagerControl,
+            sections: [])
     }
 }
 
-extension ProductDetailViewController: ProductDetailViewControllerType {}
+extension ProductDetailViewController: ProductDetailViewControllerType {
+    func setupView(from model: Product) {
+        customView.conditionLabel.text = model.condition
+        customView.titleLabel.text = model.title        
+    }
+
+    func setupImagePager(with sections: [ImagePagerSectionViewModel]) {
+        imagePagerCollectionDataSource.sections = sections
+    }
+    
+    func setupPrice(_ price: String) {
+        customView.priceLabel.text =  price
+    }
+}
