@@ -69,7 +69,7 @@ public final class RESTClient {
             throw ServiceError.serverError(response: response.response)
         }
 
-        LocalLogger.register(model: LogModel(level: .info, data: "Data Response: \(String(data: response.data, encoding: .utf8) ?? "")"))
+//        LocalLogger.register(model: LogModel(level: .info, data: "Data Response: \(String(data: response.data, encoding: .utf8) ?? "")"))
         return response.data
     }
 }

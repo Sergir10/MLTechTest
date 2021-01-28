@@ -69,6 +69,6 @@ extension ProductListViewController: ProductListViewControllerType {
     }
     
     func didSelectItem(at indexPath: IndexPath) {
-        print("Selected: \(indexPath)")
+        presenter.selectedItem(at: indexPath)
     }
 }

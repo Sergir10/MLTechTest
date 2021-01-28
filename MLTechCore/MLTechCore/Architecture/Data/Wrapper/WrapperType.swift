@@ -10,7 +10,7 @@ import Foundation
 
 public protocol CoreWrapperType {
     associatedtype APIData: Codable
-    associatedtype CoreData: Codable
+    associatedtype CoreData
 
     static func map(_ apiData: APIData) throws -> CoreData
 }

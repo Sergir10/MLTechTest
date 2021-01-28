@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -20,6 +20,8 @@
 		77B34B7725C0FBB5000F464C /* MLTechCore.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 77B34B7425C0FBB5000F464C /* MLTechCore.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		77B34B7825C0FBB5000F464C /* MLTechNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 77B34B7525C0FBB5000F464C /* MLTechNetwork.framework */; };
 		77B34B7925C0FBB5000F464C /* MLTechNetwork.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 77B34B7525C0FBB5000F464C /* MLTechNetwork.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		77D91C0F25C2452800E239ED /* ProductDetail.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 77D91C0E25C2452800E239ED /* ProductDetail.framework */; };
+		77D91C1025C2452800E239ED /* ProductDetail.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 77D91C0E25C2452800E239ED /* ProductDetail.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		9DADC45AC95117C9B1E9E5A4 /* Pods_MLTechTestTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD2666BF39D24F15357DAE28 /* Pods_MLTechTestTests.framework */; };
 		C877064011B6C98953ABC335 /* Pods_MLTechTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C5A9BA5697F0702C3EF28E8E /* Pods_MLTechTest.framework */; };
 /* End PBXBuildFile section */
@@ -42,6 +44,7 @@
 			dstSubfolderSpec = 10;
 			files = (
 				77B34B7325C0FBA9000F464C /* ProductList.framework in Embed Frameworks */,
+				77D91C1025C2452800E239ED /* ProductDetail.framework in Embed Frameworks */,
 				775B0A0225BD035800BA3A29 /* MLApplication.framework in Embed Frameworks */,
 				77B34B7925C0FBB5000F464C /* MLTechNetwork.framework in Embed Frameworks */,
 				77B34B7725C0FBB5000F464C /* MLTechCore.framework in Embed Frameworks */,
@@ -68,6 +71,7 @@
 		77B34B7125C0FBA9000F464C /* ProductList.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = ProductList.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		77B34B7425C0FBB5000F464C /* MLTechCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = MLTechCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		77B34B7525C0FBB5000F464C /* MLTechNetwork.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = MLTechNetwork.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		77D91C0E25C2452800E239ED /* ProductDetail.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = ProductDetail.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A4DE163F2B77A1425D8C159B /* Pods-MLTechTestTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MLTechTestTests.debug.xcconfig"; path = "Target Support Files/Pods-MLTechTestTests/Pods-MLTechTestTests.debug.xcconfig"; sourceTree = "<group>"; };
 		C5A9BA5697F0702C3EF28E8E /* Pods_MLTechTest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MLTechTest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD2666BF39D24F15357DAE28 /* Pods_MLTechTestTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MLTechTestTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -81,6 +85,7 @@
 				77B34B7225C0FBA9000F464C /* ProductList.framework in Frameworks */,
 				775B0A0125BD035800BA3A29 /* MLApplication.framework in Frameworks */,
 				77B34B7625C0FBB5000F464C /* MLTechCore.framework in Frameworks */,
+				77D91C0F25C2452800E239ED /* ProductDetail.framework in Frameworks */,
 				77B34B7825C0FBB5000F464C /* MLTechNetwork.framework in Frameworks */,
 				C877064011B6C98953ABC335 /* Pods_MLTechTest.framework in Frameworks */,
 			);
@@ -160,6 +165,7 @@
 		839D272C0EABB4274147447A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				77D91C0E25C2452800E239ED /* ProductDetail.framework */,
 				77B34B7425C0FBB5000F464C /* MLTechCore.framework */,
 				77B34B7525C0FBB5000F464C /* MLTechNetwork.framework */,
 				77B34B7125C0FBA9000F464C /* ProductList.framework */,

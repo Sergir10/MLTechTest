@@ -15,7 +15,7 @@ public final class ProductListConfigurator {
         let presenter = ProductListPresenter(
             dependencies: ProductListPresenter.Dependencies(
                 coordinator: moduleInput.coordinator,
-                searchProductUseCase: SearchProductUseCase(productRepository: ProductRespository(client: moduleInput.client))))
+                searchProductUseCase: SearchProductUseCase(productRepository: ProductListRespository(client: moduleInput.client))))
 
         let viewController = ProductListViewController(presenter: presenter)
         viewController.modalPresentationStyle = .fullScreen

@@ -8,7 +8,7 @@
 
 import Foundation
 
-public struct CoreSort: Codable {
+public struct CoreSort {
     public let identifier: String
     public let name: String
 

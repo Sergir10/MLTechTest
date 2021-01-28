@@ -14,7 +14,7 @@ import XCTest
 @testable import ProductList
 
 final class ProductListRespositoryTest: XCTestCase {
-    private var sut: ProductRespositoryType!
+    private var sut: ProductListRespositoryType!
     private var clientSpy: RESTClientSpy!
     private var client: RESTClientStub!
     private var cancelable = Set<AnyCancellable>()

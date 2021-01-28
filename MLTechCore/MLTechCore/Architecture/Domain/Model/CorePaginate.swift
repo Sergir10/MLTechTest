@@ -6,7 +6,7 @@
 //  Copyright © 2021 Cebollitas. All rights reserved.
 //
 
-public struct CorePaginate: Codable {
+public struct CorePaginate {
     public let offset: Int
     public let limit: Int
 

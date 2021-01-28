@@ -8,7 +8,7 @@
 
 import MLTechCore
 
-struct ProductList: Codable {
+struct ProductList {
     let sort: CoreSort
     let paging: CorePaginate
     let results: [ProductListResult]

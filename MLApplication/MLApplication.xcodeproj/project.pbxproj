@@ -13,6 +13,8 @@
 		775B0ACA25BDB62500BA3A29 /* ProductList.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 775B0AC825BDB62500BA3A29 /* ProductList.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		775B0AD625BDBACB00BA3A29 /* ApplicationPresenterTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 775B0AD525BDBACB00BA3A29 /* ApplicationPresenterTest.swift */; };
 		775B0ADA25BDBB8C00BA3A29 /* ApplicationCoordinatorSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 775B0AD925BDBB8C00BA3A29 /* ApplicationCoordinatorSpy.swift */; };
+		77D91C1325C2455300E239ED /* ProductDetail.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 77D91C1225C2455300E239ED /* ProductDetail.framework */; };
+		77D91C1425C2455300E239ED /* ProductDetail.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 77D91C1225C2455300E239ED /* ProductDetail.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		77DDAFBC25BD01E100B0ED2C /* ApplicationConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77DDAFBB25BD01E100B0ED2C /* ApplicationConfigurator.swift */; };
 		77DDAFBE25BD01E100B0ED2C /* ApplicationContract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77DDAFBD25BD01E100B0ED2C /* ApplicationContract.swift */; };
 		77DDAFC025BD01E100B0ED2C /* ApplicationCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77DDAFBF25BD01E100B0ED2C /* ApplicationCoordinator.swift */; };
@@ -40,6 +42,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				77D91C1425C2455300E239ED /* ProductDetail.framework in Embed Frameworks */,
 				775B0ACA25BDB62500BA3A29 /* ProductList.framework in Embed Frameworks */,
 				775B0A1025BD037600BA3A29 /* MLTechCore.framework in Embed Frameworks */,
 			);
@@ -53,6 +56,7 @@
 		775B0AC825BDB62500BA3A29 /* ProductList.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = ProductList.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		775B0AD525BDBACB00BA3A29 /* ApplicationPresenterTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationPresenterTest.swift; sourceTree = "<group>"; };
 		775B0AD925BDBB8C00BA3A29 /* ApplicationCoordinatorSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationCoordinatorSpy.swift; sourceTree = "<group>"; };
+		77D91C1225C2455300E239ED /* ProductDetail.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = ProductDetail.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		77DDAFB625BD01E100B0ED2C /* MLApplication.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MLApplication.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		77DDAFBB25BD01E100B0ED2C /* ApplicationConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationConfigurator.swift; sourceTree = "<group>"; };
 		77DDAFBD25BD01E100B0ED2C /* ApplicationContract.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationContract.swift; sourceTree = "<group>"; };
@@ -71,6 +75,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				77D91C1325C2455300E239ED /* ProductDetail.framework in Frameworks */,
 				775B0AC925BDB62500BA3A29 /* ProductList.framework in Frameworks */,
 				775B0A0F25BD037600BA3A29 /* MLTechCore.framework in Frameworks */,
 			);
@@ -90,6 +95,7 @@
 		775B0A0D25BD037600BA3A29 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				77D91C1225C2455300E239ED /* ProductDetail.framework */,
 				775B0AC825BDB62500BA3A29 /* ProductList.framework */,
 				775B0A0E25BD037600BA3A29 /* MLTechCore.framework */,
 			);

@@ -9,6 +9,7 @@
 import MLTechCore
 import MLTechNetwork
 
+import ProductDetail
 import ProductList
 import UIKit
 
@@ -43,6 +44,10 @@ extension ApplicationCoordinator: ApplicationCoordinatorType {
     }
 
     public func runProductDetailModule(for productId: String) {
-        
+        let module = ProductDetailConfigurator.getModule(
+            moduleInput: ProductDetailConfigurator.ModuleInput(coordinator: self, client: restClient, productId: productId))
+
+        navigationController.setNavigationBarHidden(false, animated: false)
+        navigationController.pushViewController(module, animated: true)
     }
 }

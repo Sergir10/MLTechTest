@@ -9,7 +9,7 @@
 import Combine
 import MLTechNetwork
 
-final class ProductRespository {
+final class ProductListRespository {
     private struct Constant {
         static let relativePath = "/sites/MCO/search"
     }
@@ -27,14 +27,14 @@ final class ProductRespository {
     private func mapData(_ data: APIProductList) -> AnyPublisher<ProductList, ServiceError> {
         do {
             let domainData = try ProductListWrapper.map(data)
-            return Future<ProductList, ServiceError> { $0(.success(domainData)) }.eraseToAnyPublisher()
+            return Future { $0(.success(domainData)) }.eraseToAnyPublisher()
         } catch {
-            return Fail<ProductList, ServiceError>(error: ServiceError.serverError(response: error)).eraseToAnyPublisher()
+            return Fail(error: ServiceError.serverError(response: error)).eraseToAnyPublisher()
         }
     }
 }
 
-extension ProductRespository: ProductRespositoryType {
+extension ProductListRespository: ProductListRespositoryType {
     func searchProduct(by query: String) -> AnyPublisher<ProductList, ServiceError> {
         client.requestTo(endpoint: endpointForQuery(query), model: APIProductList.self)
             .flatMap { self.mapData($0) }

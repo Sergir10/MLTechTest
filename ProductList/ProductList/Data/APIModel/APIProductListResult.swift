@@ -6,7 +6,7 @@
 //  Copyright © 2021 Cebollitas. All rights reserved.
 //
 
-import Foundation
+import MLTechCore
 
 struct APIProductListResult: Codable {
     let identifier: String?
@@ -14,7 +14,7 @@ struct APIProductListResult: Codable {
     let price: Int?
     let availableQuantity: Int?
     let thumbnail: String?
-    let shipping: APIShipping
+    let shipping: APICoreShipping
 
     enum CodingKeys: String, CodingKey {
         case identifier = "id"

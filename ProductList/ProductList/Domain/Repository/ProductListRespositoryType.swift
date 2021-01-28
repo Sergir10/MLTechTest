@@ -1,5 +1,5 @@
 //
-//  ProductRespositoryType.swift
+//  ProductListRespositoryType.swift
 //  ProductList
 //
 //  Created by Sergio Giraldo on 24/01/21.
@@ -9,6 +9,6 @@
 import Combine
 import MLTechNetwork
 
-protocol ProductRespositoryType: AnyObject {
+protocol ProductListRespositoryType: AnyObject {
     func searchProduct(by query: String) -> AnyPublisher<ProductList, ServiceError>
 }

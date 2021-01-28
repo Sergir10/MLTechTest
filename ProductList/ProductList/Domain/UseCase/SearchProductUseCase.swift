@@ -10,9 +10,9 @@ import Combine
 import MLTechCore
 
 final class SearchProductUseCase: BaseUseCase<ProductList, String> {
-    private var productRepository: ProductRespositoryType
+    private var productRepository: ProductListRespositoryType
 
-    init(productRepository: ProductRespositoryType) {
+    init(productRepository: ProductListRespositoryType) {
         self.productRepository = productRepository
     }
 
