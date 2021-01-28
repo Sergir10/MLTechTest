@@ -63,7 +63,7 @@ final class ProductInformationView: UIView, ProductInformationViewType {
         view.textColor = .lightGray
         view.text = title
         view.textAlignment = .center
-
+        
         return view
     }
 
@@ -73,7 +73,7 @@ final class ProductInformationView: UIView, ProductInformationViewType {
         view.numberOfLines = 0
         view.text = description
         view.textAlignment = .center
-
+        
         return view
     }
 

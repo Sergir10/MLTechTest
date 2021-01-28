@@ -86,6 +86,8 @@ final class ImagePagerView: UIView, ImagePagerViewType {
 
             pagerControl.bottomAnchor.constraint(equalTo: imagePagerContainerView.bottomAnchor, constant: -10),
             pagerControl.centerXAnchor.constraint(equalTo: imagePagerContainerView.centerXAnchor),
+            pagerControl.leadingAnchor.constraint(equalTo: imagePagerContainerView.leadingAnchor),
+            pagerControl.trailingAnchor.constraint(equalTo: imagePagerContainerView.trailingAnchor)
         ])
     }
 }

@@ -95,14 +95,14 @@ final class ProductDetailView: UIView, ProductDetailViewType {
     }
 
     private func initialSetup() {
-        setupScrollContainerView()
-        setupContainerView()
         setupComponentStackView()
         setupConditionLabel()
         setupTitleLabel()
         setupImagePagerComponentView()
         setupPriceLabel()
         setupProductInformation()
+        setupContainerView()
+        setupScrollContainerView()
     }
 
     private func setupScrollContainerView() {
@@ -118,14 +118,16 @@ final class ProductDetailView: UIView, ProductDetailViewType {
 
     private func setupContainerView() {
         containerScrollView.addSubview(containerView)
+        let heightConstraint = containerView.heightAnchor.constraint(equalTo: containerScrollView.heightAnchor)
+        heightConstraint.priority = .defaultLow
 
         NSLayoutConstraint.activate([
             containerView.topAnchor.constraint(equalTo: containerScrollView.topAnchor),
             containerView.bottomAnchor.constraint(equalTo: containerScrollView.bottomAnchor),
             containerView.leadingAnchor.constraint(equalTo: containerScrollView.leadingAnchor),
             containerView.trailingAnchor.constraint(equalTo: containerScrollView.trailingAnchor),
-            containerView.heightAnchor.constraint(equalTo: containerScrollView.heightAnchor),
             containerView.widthAnchor.constraint(equalTo: containerScrollView.widthAnchor),
+            heightConstraint,
         ])
     }
 
@@ -136,6 +138,7 @@ final class ProductDetailView: UIView, ProductDetailViewType {
             componentStackView.topAnchor.constraint(equalTo: containerView.topAnchor, constant: 10),
             componentStackView.leadingAnchor.constraint(equalTo: containerView.leadingAnchor, constant: 10),
             componentStackView.trailingAnchor.constraint(equalTo: containerView.trailingAnchor, constant: -10),
+            componentStackView.bottomAnchor.constraint(equalTo: containerView.bottomAnchor),
         ])
     }
 
