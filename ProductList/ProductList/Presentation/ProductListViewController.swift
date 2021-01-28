@@ -25,7 +25,8 @@ final class ProductListViewController: BaseViewController<ProductListPresenterTy
         customView.searchProductBar.delegate = self
         collectionViewDataSource = ProductCollectionViewDataSource(
             collectionView: customView.productCollectionView,
-            sections: [])
+            sections: [],
+            delegate: self)
     }
 }
 
@@ -33,13 +34,13 @@ extension ProductListViewController: ProductListViewControllerType {
     func showProduct(_ productSection: ProductListSectionViewModel) {
         collectionViewDataSource.sections = [productSection]
     }
-    
+
     func showEmptyState(_ productSection: ProductListSectionViewModel, message: String) {
         collectionViewDataSource.sections = [productSection]
         customView.hideSearchView(hide: false, from: view)
         customView.searchComponent.setDescription(message)
     }
-    
+
     func setDescriptionTitle(_ title: String) {
         customView.descriptionLabel.text = title
     }
@@ -65,5 +66,9 @@ extension ProductListViewController: ProductListViewControllerType {
         customView.searchProductBar.text = ""
         customView.searchProductBar.resignFirstResponder()
         customView.hideBackgroundView(hide: true, from: view)
+    }
+    
+    func didSelectItem(at indexPath: IndexPath) {
+        print("Selected: \(indexPath)")
     }
 }

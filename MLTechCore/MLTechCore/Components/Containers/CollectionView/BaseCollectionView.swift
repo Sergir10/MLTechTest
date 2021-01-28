@@ -17,14 +17,16 @@ public protocol CollectionViewType: ContainerConfigurable, UICollectionViewDeleg
 open class BaseCollectionView<T: SectionType, U: CellConfigurable>: CollectionViewDataSource<T>, CollectionViewType where T.DataType == U.DataType {
     private lazy var dataSource = makeDataSource()
 
+    public weak var delegate: ItemCellSelectable?
     public var collectionView: UICollectionView
     public var sections: [T] = [] {
         didSet { updateDataSource() }
     }
 
-    public init(collectionView: UICollectionView, sections: [T]) {
+    public init(collectionView: UICollectionView, sections: [T], delegate: ItemCellSelectable? = nil) {
         self.collectionView = collectionView
         self.sections = sections
+        self.delegate = delegate
         super.init(collectionView: collectionView) { _, _, _ in nil }
 
         initialSetup()
@@ -62,5 +64,9 @@ open class BaseCollectionView<T: SectionType, U: CellConfigurable>: CollectionVi
 
     open func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
         return 0
+    }
+
+    open func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        delegate?.didSelectItem(at: indexPath)
     }
 }

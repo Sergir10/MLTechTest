@@ -6,6 +6,7 @@
 //  Copyright © 2021 Cebollitas. All rights reserved.
 //
 
+import Foundation
 import MLTechCore
 
 final class ProductListPresenter: BasePresenter<ProductListViewController, ProductListViewControllerType> {
@@ -15,6 +16,7 @@ final class ProductListPresenter: BasePresenter<ProductListViewController, Produ
     }
 
     private let dependencies: Dependencies
+    private var products: [ProductListResult] = []
 
     init(dependencies: Dependencies) {
         self.dependencies = dependencies
@@ -34,10 +36,12 @@ final class ProductListPresenter: BasePresenter<ProductListViewController, Produ
     }
 
     private func processProductList(_ productsList: ProductList) {
-        if productsList.results.isEmpty {
+        products = productsList.results
+
+        if products.isEmpty {
             showEmptyView()
         } else {
-            showProducts(productsList.results)
+            showProducts(products)
         }
     }
 
@@ -67,5 +71,12 @@ final class ProductListPresenter: BasePresenter<ProductListViewController, Produ
 extension ProductListPresenter: ProductListPresenterType {
     func searchBarSearchButtonClicked(with text: String) {
         searchProduct(by: text)
+    }
+
+    func selectedItem(at indexpath: IndexPath) {
+        guard indexpath.row < products.count else { return }
+
+        let selectedProduct = products[indexpath.row]
+        dependencies.coordinator.runProductDetailModule(for: selectedProduct.identifier)
     }
 }

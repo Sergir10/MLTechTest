@@ -42,5 +42,7 @@ extension ApplicationCoordinator: ApplicationCoordinatorType {
         navigationController.setViewControllers([module], animated: false)
     }
 
-    public func runProductDetailModule() {}
+    public func runProductDetailModule(for productId: String) {
+        
+    }
 }

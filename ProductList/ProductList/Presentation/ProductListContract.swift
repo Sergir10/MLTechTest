@@ -9,7 +9,7 @@
 import MLTechCore
 import UIKit
 
-protocol ProductListViewControllerType: AnyObject, UISearchBarDelegate {
+protocol ProductListViewControllerType: ItemCellSelectable, UISearchBarDelegate {
     func showProduct(_ productSection: ProductListSectionViewModel)
     func showEmptyState(_ productSection: ProductListSectionViewModel, message: String)
     func setDescriptionTitle(_ title: String)
@@ -17,6 +17,7 @@ protocol ProductListViewControllerType: AnyObject, UISearchBarDelegate {
 
 protocol ProductListPresenterType: Bindable {
     func searchBarSearchButtonClicked(with text: String)
+    func selectedItem(at indexpath: IndexPath)
 }
 
 protocol ProductListViewType: UIView {

@@ -13,5 +13,5 @@ public protocol ApplicationCoordinatorType: ProductListCoordinatorType {
 }
 
 public protocol ProductListCoordinatorType: CoordinatorType {
-    func runProductDetailModule()
+    func runProductDetailModule(for productId: String)
 }
