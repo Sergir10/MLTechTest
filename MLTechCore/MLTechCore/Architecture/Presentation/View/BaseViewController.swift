@@ -6,6 +6,7 @@
 //  Copyright © 2021 Cebollitas. All rights reserved.
 //
 
+import SVProgressHUD
 import UIKit
 
 open class BaseViewController<PresenterType, ViewType>: UIViewController, BaseViewControllerType {
@@ -60,5 +61,13 @@ open class BaseViewController<PresenterType, ViewType>: UIViewController, BaseVi
     // MARK: - Error
     public func presentError(_ error: InterfaceError) {
         error.showError { self.present($0, animated: true, completion: nil) }
+    }
+
+    public func showProgress() {
+        SVProgressHUD.show()
+    }
+
+    public func hideProgress() {
+        SVProgressHUD.dismiss()
     }
 }

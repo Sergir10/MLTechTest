@@ -8,12 +8,32 @@ target 'MLTechTest' do
 
   # Pods for MLTechTest
   pod 'Kingfisher', '~> 6.0'
+  pod 'SVProgressHUD'
 
   target 'MLTechTestTests' do
     inherit! :search_paths
     # Pods for testing
   end
 
+target 'ProductList' do
+  project 'ProductList/ProductList'
+
+  target 'ProductListTests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
+  
+end
+
+target 'ProductDetail' do
+  project 'ProductDetail/ProductDetail'
+
+  target 'ProductDetailTests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
+  
+end
   target 'MLTechCore' do
     project 'MLTechCore/MLTechCore'
   

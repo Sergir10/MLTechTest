@@ -20,6 +20,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
         window = UIWindow(frame: windowScene.coordinateSpace.bounds)
         window?.windowScene = windowScene
+        (UIApplication.shared.delegate as? AppDelegate)?.window = window
 
         applicationCoordinator = ApplicationCoordinator(window: window!)
         applicationCoordinator.start()

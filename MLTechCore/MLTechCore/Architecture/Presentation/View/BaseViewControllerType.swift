@@ -8,7 +8,7 @@
 
 import UIKit
 
-public protocol BaseViewControllerType: ViewControllerBindable, ErrorShowable {
+public protocol BaseViewControllerType: ViewControllerBindable, ErrorShowable, ProgressShowable {
     associatedtype PresenterType
     associatedtype ViewType
 
@@ -18,4 +18,9 @@ public protocol BaseViewControllerType: ViewControllerBindable, ErrorShowable {
 
 public protocol ErrorShowable {
     func presentError(_ error: InterfaceError)
+}
+
+public protocol ProgressShowable {
+    func showProgress()
+    func hideProgress()
 }

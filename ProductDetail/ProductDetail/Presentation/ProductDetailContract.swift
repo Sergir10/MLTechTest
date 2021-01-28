@@ -9,7 +9,7 @@
 import MLTechCore
 import UIKit
 
-protocol ProductDetailViewControllerType: AnyObject, ErrorShowable {
+protocol ProductDetailViewControllerType: AnyObject, ErrorShowable, ProgressShowable {
     func setupView(from model: Product)
     func setupImagePager(with sections: [ImagePagerSectionViewModel])
     func setupPrice(_ price: String)

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		26041CAD2044BE5D8358EE6E /* Pods_MLTechTest_ProductList.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3B0585DEBF106861AA2F750 /* Pods_MLTechTest_ProductList.framework */; };
 		77315F4725BE1FB300935032 /* APIProductList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77315F4625BE1FB300935032 /* APIProductList.swift */; };
 		77315F5E25BE264B00935032 /* APIProductListResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77315F5D25BE264B00935032 /* APIProductListResult.swift */; };
 		77315F7525BE292800935032 /* ProductListWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77315F7425BE292800935032 /* ProductListWrapper.swift */; };
@@ -31,6 +32,7 @@
 		77DDB01225BDB18000B0ED2C /* MLTechCore.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 77DDB00F25BDB18000B0ED2C /* MLTechCore.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		77DDB01325BDB18000B0ED2C /* MLTechNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 77DDB01025BDB18000B0ED2C /* MLTechNetwork.framework */; };
 		77DDB01425BDB18000B0ED2C /* MLTechNetwork.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 77DDB01025BDB18000B0ED2C /* MLTechNetwork.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		BAD45BD25081C1798A400EB4 /* Pods_ProductListTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B8E427E95E38009627AFDBD0 /* Pods_ProductListTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -84,6 +86,12 @@
 		77DDB00425BDB16400B0ED2C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		77DDB00F25BDB18000B0ED2C /* MLTechCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = MLTechCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		77DDB01025BDB18000B0ED2C /* MLTechNetwork.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = MLTechNetwork.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9E9178B9F7AA2BB13B2EF131 /* Pods-MLTechTest-ProductList.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MLTechTest-ProductList.debug.xcconfig"; path = "Target Support Files/Pods-MLTechTest-ProductList/Pods-MLTechTest-ProductList.debug.xcconfig"; sourceTree = "<group>"; };
+		A35C4C88097D28E0A7D275A3 /* Pods-MLTechTest-ProductList.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MLTechTest-ProductList.release.xcconfig"; path = "Target Support Files/Pods-MLTechTest-ProductList/Pods-MLTechTest-ProductList.release.xcconfig"; sourceTree = "<group>"; };
+		B8E427E95E38009627AFDBD0 /* Pods_ProductListTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ProductListTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C3B0585DEBF106861AA2F750 /* Pods_MLTechTest_ProductList.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MLTechTest_ProductList.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FEF6A742C0F37956190BCF0E /* Pods-ProductListTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ProductListTests.debug.xcconfig"; path = "Target Support Files/Pods-ProductListTests/Pods-ProductListTests.debug.xcconfig"; sourceTree = "<group>"; };
+		FF52820504AADF788632BC37 /* Pods-ProductListTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ProductListTests.release.xcconfig"; path = "Target Support Files/Pods-ProductListTests/Pods-ProductListTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +101,7 @@
 			files = (
 				77DDB01325BDB18000B0ED2C /* MLTechNetwork.framework in Frameworks */,
 				77DDB01125BDB18000B0ED2C /* MLTechCore.framework in Frameworks */,
+				26041CAD2044BE5D8358EE6E /* Pods_MLTechTest_ProductList.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -101,12 +110,25 @@
 			buildActionMask = 2147483647;
 			files = (
 				77DDAFFE25BDB16400B0ED2C /* ProductList.framework in Frameworks */,
+				BAD45BD25081C1798A400EB4 /* Pods_ProductListTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6C74D97C78F48AEA6C657BF1 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				9E9178B9F7AA2BB13B2EF131 /* Pods-MLTechTest-ProductList.debug.xcconfig */,
+				A35C4C88097D28E0A7D275A3 /* Pods-MLTechTest-ProductList.release.xcconfig */,
+				FEF6A742C0F37956190BCF0E /* Pods-ProductListTests.debug.xcconfig */,
+				FF52820504AADF788632BC37 /* Pods-ProductListTests.release.xcconfig */,
+			);
+			name = Pods;
+			path = ../Pods;
+			sourceTree = "<group>";
+		};
 		77315F4025BE1F1E00935032 /* Repository */ = {
 			isa = PBXGroup;
 			children = (
@@ -219,6 +241,7 @@
 				77DDB00125BDB16400B0ED2C /* ProductListTests */,
 				77DDAFE825BDB16400B0ED2C /* Products */,
 				77DDB00E25BDB18000B0ED2C /* Frameworks */,
+				6C74D97C78F48AEA6C657BF1 /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -270,6 +293,8 @@
 			children = (
 				77DDB00F25BDB18000B0ED2C /* MLTechCore.framework */,
 				77DDB01025BDB18000B0ED2C /* MLTechNetwork.framework */,
+				C3B0585DEBF106861AA2F750 /* Pods_MLTechTest_ProductList.framework */,
+				B8E427E95E38009627AFDBD0 /* Pods_ProductListTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -291,6 +316,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 77DDB00825BDB16400B0ED2C /* Build configuration list for PBXNativeTarget "ProductList" */;
 			buildPhases = (
+				8A6EF237336500896AC7B41C /* [CP] Check Pods Manifest.lock */,
 				77DDAFE225BDB16400B0ED2C /* Headers */,
 				77DDAFE325BDB16400B0ED2C /* Sources */,
 				77DDAFE425BDB16400B0ED2C /* Frameworks */,
@@ -310,6 +336,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 77DDB00B25BDB16400B0ED2C /* Build configuration list for PBXNativeTarget "ProductListTests" */;
 			buildPhases = (
+				561224BFBD76679D3FC46244 /* [CP] Check Pods Manifest.lock */,
 				77DDAFF925BDB16400B0ED2C /* Sources */,
 				77DDAFFA25BDB16400B0ED2C /* Frameworks */,
 				77DDAFFB25BDB16400B0ED2C /* Resources */,
@@ -378,6 +405,53 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		561224BFBD76679D3FC46244 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ProductListTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8A6EF237336500896AC7B41C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-MLTechTest-ProductList-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		77DDAFE325BDB16400B0ED2C /* Sources */ = {
@@ -548,6 +622,7 @@
 		};
 		77DDB00925BDB16400B0ED2C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9E9178B9F7AA2BB13B2EF131 /* Pods-MLTechTest-ProductList.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -574,6 +649,7 @@
 		};
 		77DDB00A25BDB16400B0ED2C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A35C4C88097D28E0A7D275A3 /* Pods-MLTechTest-ProductList.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -600,6 +676,7 @@
 		};
 		77DDB00C25BDB16400B0ED2C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FEF6A742C0F37956190BCF0E /* Pods-ProductListTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CLANG_ENABLE_MODULES = YES;
@@ -621,6 +698,7 @@
 		};
 		77DDB00D25BDB16400B0ED2C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FF52820504AADF788632BC37 /* Pods-ProductListTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CLANG_ENABLE_MODULES = YES;

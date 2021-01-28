@@ -26,6 +26,7 @@ final class ProductListPresenter: BasePresenter<ProductListViewController, Produ
     override func viewDidLoad() {}
 
     private func searchProduct(by name: String) {
+        view.showProgress()
         dependencies.searchProductUseCase.execute(
             params: name,
             onSuccess: { productList in
@@ -34,7 +35,9 @@ final class ProductListPresenter: BasePresenter<ProductListViewController, Produ
             onError: { error in
                 self.view.presentError(error)
             },
-            onFinished: {})
+            onFinished: {
+                self.view.hideProgress()
+            })
     }
 
     private func processProductList(_ productsList: ProductList) {

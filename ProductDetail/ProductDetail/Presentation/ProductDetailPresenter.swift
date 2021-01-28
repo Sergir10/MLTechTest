@@ -28,6 +28,7 @@ final class ProductDetailPresenter: BasePresenter<ProductDetailViewController, P
     }
 
     private func loadProduct() {
+        view.showProgress()
         dependencies.getProductByIdUseCase.execute(
             params: dependencies.productId,
             onSuccess: { product in
@@ -36,7 +37,9 @@ final class ProductDetailPresenter: BasePresenter<ProductDetailViewController, P
             onError: { error in
                 self.view.presentError(error)
             },
-            onFinished: {})
+            onFinished: {
+                self.view.hideProgress()
+            })
     }
 
     private func showProduct(_ product: Product) {
