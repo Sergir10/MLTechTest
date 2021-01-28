@@ -1,4 +1,4 @@
-    //
+//
 //  ProductDetailViewController.swift
 //  ProductDetail
 //
@@ -24,8 +24,8 @@ final class ProductDetailViewController: BaseViewController<ProductDetailPresent
 
     private func initialSetup() {
         imagePagerCollectionDataSource = ImagePagerDataSource(
-            collectionView: customView.imagePagerCollection,
-            pagerControl: customView.pagerControl,
+            collectionView: customView.imagePagerComponentView.collectionView,
+            pagerControl: customView.imagePagerComponentView.pagerControl,
             sections: [])
     }
 }
@@ -33,14 +33,18 @@ final class ProductDetailViewController: BaseViewController<ProductDetailPresent
 extension ProductDetailViewController: ProductDetailViewControllerType {
     func setupView(from model: Product) {
         customView.conditionLabel.text = model.condition
-        customView.titleLabel.text = model.title        
+        customView.titleLabel.text = model.title
     }
 
     func setupImagePager(with sections: [ImagePagerSectionViewModel]) {
         imagePagerCollectionDataSource.sections = sections
     }
-    
+
     func setupPrice(_ price: String) {
-        customView.priceLabel.text =  price
+        customView.priceLabel.text = price
+    }
+
+    func setupProductInformation(_ information: [ProductInformationViewModel], title: String) {
+        customView.productInformationComponent.setupComponent(with: title, and: information)
     }
 }

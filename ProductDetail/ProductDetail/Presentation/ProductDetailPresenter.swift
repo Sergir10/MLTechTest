@@ -42,6 +42,7 @@ final class ProductDetailPresenter: BasePresenter<ProductDetailViewController, P
     private func showProduct(_ product: Product) {
         setupImageComponent(with: product.pictures)
         setupFormattedPrice(product.price, currencyId: product.currencyId)
+        setupProductInformation(with: product.attributes)
         view.setupView(from: product)
     }
 
@@ -60,6 +61,14 @@ final class ProductDetailPresenter: BasePresenter<ProductDetailViewController, P
         }
 
         view.setupPrice(formattedPrice + "  " + currencyId)
+    }
+
+    private func setupProductInformation(with attributes: [Attributes]) {
+        let information = attributes.map {
+            ProductInformationViewModel(elementName: $0.name, elementDescription: $0.value)
+        }
+
+        view.setupProductInformation(information, title: "Información del producto")
     }
 }
 

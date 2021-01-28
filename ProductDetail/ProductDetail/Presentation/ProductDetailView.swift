@@ -41,6 +41,15 @@ final class ProductDetailView: UIView, ProductDetailViewType {
         return view
     }()
 
+    lazy var imagePagerComponentView: ImagePagerViewType = {
+        let view = ImagePagerView(frame: .zero)
+        view.backgroundColor = .white
+        view.heightAnchor.constraint(equalToConstant: 300).isActive = true
+
+        view.translatesAutoresizingMaskIntoConstraints = false
+        return view
+    }()
+
     lazy var conditionLabel: UILabel = {
         let view = UILabel(frame: .zero)
         view.font = UIFont.systemFont(ofSize: 12, weight: .light)
@@ -57,48 +66,23 @@ final class ProductDetailView: UIView, ProductDetailViewType {
         return view
     }()
 
-    private lazy var imagePagerContainerView: UIView = {
-        let view = UIView(frame: .zero)
-        view.backgroundColor = .white
-
-        view.translatesAutoresizingMaskIntoConstraints = false
-        return view
-    }()
-
-    lazy var imagePagerCollection: UICollectionView = {
-        let view = UICollectionView(frame: .zero, collectionViewLayout: self.layout)
-        view.backgroundColor = .white
-        view.showsHorizontalScrollIndicator = false
-        view.isPagingEnabled = true
-
-        view.translatesAutoresizingMaskIntoConstraints = false
-        return view
-    }()
-
-    private lazy var layout: UICollectionViewFlowLayout = {
-        let layout = UICollectionViewFlowLayout()
-        layout.scrollDirection = .horizontal
-
-        return layout
-    }()
-
-    lazy var pagerControl: UIPageControl = {
-        let control = UIPageControl(frame: .zero)
-        control.pageIndicatorTintColor = .black
-        control.currentPageIndicatorTintColor = Theme.Color.primary
-
-        control.translatesAutoresizingMaskIntoConstraints = false
-        return control
-    }()
-
     lazy var priceLabel: UILabel = {
         let label = UILabel(frame: .zero)
         label.numberOfLines = 0
         label.textColor = .black
+        label.textAlignment = .center
         label.lineBreakMode = .byWordWrapping
         label.font = UIFont.systemFont(ofSize: 30, weight: .medium)
 
         return label
+    }()
+
+    lazy var productInformationComponent: ProductInformationViewType = {
+        let view = ProductInformationView(frame: .zero)
+        view.backgroundColor = .white
+
+        view.translatesAutoresizingMaskIntoConstraints = false
+        return view
     }()
 
     override init(frame: CGRect) {
@@ -116,8 +100,9 @@ final class ProductDetailView: UIView, ProductDetailViewType {
         setupComponentStackView()
         setupConditionLabel()
         setupTitleLabel()
-        setupImagePagerComponent()
+        setupImagePagerComponentView()
         setupPriceLabel()
+        setupProductInformation()
     }
 
     private func setupScrollContainerView() {
@@ -162,25 +147,15 @@ final class ProductDetailView: UIView, ProductDetailViewType {
         componentStackView.addArrangedSubview(titleLabel)
     }
 
-    private func setupImagePagerComponent() {
-        imagePagerContainerView.addSubview(imagePagerCollection)
-        imagePagerContainerView.addSubview(pagerControl)
-
-        NSLayoutConstraint.activate([
-            imagePagerContainerView.heightAnchor.constraint(equalToConstant: 300),
-            imagePagerCollection.topAnchor.constraint(equalTo: imagePagerContainerView.topAnchor, constant: 10),
-            imagePagerCollection.leadingAnchor.constraint(equalTo: imagePagerContainerView.leadingAnchor, constant: 15),
-            imagePagerCollection.trailingAnchor.constraint(equalTo: imagePagerContainerView.trailingAnchor, constant: -15),
-            imagePagerCollection.bottomAnchor.constraint(equalTo: imagePagerContainerView.bottomAnchor, constant: -40),
-            
-            pagerControl.bottomAnchor.constraint(equalTo: imagePagerContainerView.bottomAnchor, constant: -10),
-            pagerControl.centerXAnchor.constraint(equalTo: imagePagerContainerView.centerXAnchor),
-        ])
-
-        componentStackView.addArrangedSubview(imagePagerContainerView)
+    private func setupImagePagerComponentView() {
+        componentStackView.addArrangedSubview(imagePagerComponentView)
     }
 
     private func setupPriceLabel() {
         componentStackView.addArrangedSubview(priceLabel)
+    }
+
+    private func setupProductInformation() {
+        componentStackView.addArrangedSubview(productInformationComponent)
     }
 }

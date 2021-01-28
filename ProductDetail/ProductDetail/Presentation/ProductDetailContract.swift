@@ -13,14 +13,15 @@ protocol ProductDetailViewControllerType: AnyObject, ErrorShowable {
     func setupView(from model: Product)
     func setupImagePager(with sections: [ImagePagerSectionViewModel])
     func setupPrice(_ price: String)
+    func setupProductInformation(_ information: [ProductInformationViewModel], title: String)
 }
 
 protocol ProductDetailPresenterType: Bindable {}
 
 protocol ProductDetailViewType: UIView {
+    var imagePagerComponentView: ImagePagerViewType { get }
     var conditionLabel: UILabel { get }
     var titleLabel: UILabel { get }
-    var imagePagerCollection: UICollectionView { get }
     var priceLabel: UILabel { get }
-    var pagerControl: UIPageControl { get }
+    var productInformationComponent: ProductInformationViewType { get }
 }

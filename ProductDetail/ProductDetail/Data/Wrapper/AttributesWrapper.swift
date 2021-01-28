@@ -11,12 +11,11 @@ import MLTechCore
 struct AttributesWrapper: CoreWrapperType {
     static func map(_ apiData: APIAttributes) throws -> Attributes {
         guard let identifier = apiData.identifier,
-            let name = apiData.name,
-            let value = apiData.valueName else {
+            let name = apiData.name else {
                 LocalLogger.register(model: LogModel(level: .error, data: apiData, message: "Data corrupted, please check."))
                 throw CoreWrapperError.requiredValueNotFound(description: "Required value came nil: \(apiData)")
         }
 
-        return Attributes(identifier: identifier, name: name, value: value)
+        return Attributes(identifier: identifier, name: name, value: apiData.valueName ?? "-")
     }
 }
