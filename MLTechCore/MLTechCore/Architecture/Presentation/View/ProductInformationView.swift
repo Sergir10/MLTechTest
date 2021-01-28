@@ -59,18 +59,17 @@ final class ProductInformationView: UIView, ProductInformationViewType {
 
     private func labelForTitle(_ title: String) -> UILabel {
         let view = UILabel(frame: .zero)
-        view.font = UIFont.systemFont(ofSize: 12, weight: .light)
-        view.textColor = .lightGray
+        view.font = UIFont.systemFont(ofSize: 12, weight: .regular)
         view.text = title
         view.textAlignment = .center
+        view.textColor = .darkGray
         
         return view
     }
 
     private func labelForDescription(_ description: String) -> UILabel {
         let view = UILabel(frame: .zero)
-        view.font = UIFont.systemFont(ofSize: 16, weight: .regular)
-        view.numberOfLines = 0
+        view.font = UIFont.systemFont(ofSize: 14, weight: .light)
         view.text = description
         view.textAlignment = .center
         
