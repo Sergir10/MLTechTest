@@ -43,5 +43,24 @@ end
     end
     
   end
+end
+
+target 'MLTechNetwork' do
+  project 'MLTechNetwork/MLTechNetwork'
+
+  target 'MLTechNetworkTests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
+end
+
+target 'MLApplication' do
+  project 'MLApplication/MLApplication'
+
+  target 'MLApplicationTests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
+end
 
 end
