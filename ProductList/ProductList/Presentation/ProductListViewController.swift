@@ -31,8 +31,7 @@ final class ProductListViewController: BaseViewController<ProductListPresenterTy
         collectionViewDataSource = ProductCollectionViewDataSource(
             collectionView: customView.productCollectionView,
             sections: [],
-            delegate: self,
-            isLoadMoreHidden: false)
+            delegate: self)
     }
 }
 
@@ -80,13 +79,5 @@ extension ProductListViewController: ProductListViewControllerType {
 
     func loadMore() {
         presenter.loadMoreReached()
-    }
-    
-    func showCollectionFooter() {
-        collectionViewDataSource.isLoadMoreHidden = false
-    }
-    
-    func hideCollectionFooter() {
-        collectionViewDataSource.isLoadMoreHidden = true
     }
 }

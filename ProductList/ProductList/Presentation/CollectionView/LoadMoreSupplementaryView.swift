@@ -1,11 +1,12 @@
 //
 //  LoadMoreSupplementaryView.swift
-//  MLTechCore
+//  ProductList
 //
-//  Created by Sergio Giraldo on 28/01/21.
+//  Created by Sergio Giraldo on 29/01/21.
 //  Copyright © 2021 Cebollitas. All rights reserved.
 //
 
+import MLTechCore
 import UIKit
 
 final class LoadMoreSupplementaryView: UICollectionReusableView, CellReusable {
