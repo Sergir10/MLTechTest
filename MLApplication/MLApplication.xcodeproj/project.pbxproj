@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		775966A225C44E8F008F2FF3 /* MLTechNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 775966A125C44E8F008F2FF3 /* MLTechNetwork.framework */; };
+		775966A325C44E8F008F2FF3 /* MLTechNetwork.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 775966A125C44E8F008F2FF3 /* MLTechNetwork.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		775B0A0F25BD037600BA3A29 /* MLTechCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 775B0A0E25BD037600BA3A29 /* MLTechCore.framework */; };
 		775B0A1025BD037600BA3A29 /* MLTechCore.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 775B0A0E25BD037600BA3A29 /* MLTechCore.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		775B0AC925BDB62500BA3A29 /* ProductList.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 775B0AC825BDB62500BA3A29 /* ProductList.framework */; };
@@ -44,6 +46,7 @@
 			files = (
 				77D91C1425C2455300E239ED /* ProductDetail.framework in Embed Frameworks */,
 				775B0ACA25BDB62500BA3A29 /* ProductList.framework in Embed Frameworks */,
+				775966A325C44E8F008F2FF3 /* MLTechNetwork.framework in Embed Frameworks */,
 				775B0A1025BD037600BA3A29 /* MLTechCore.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
@@ -52,6 +55,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		775966A125C44E8F008F2FF3 /* MLTechNetwork.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = MLTechNetwork.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		775B0A0E25BD037600BA3A29 /* MLTechCore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = MLTechCore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		775B0AC825BDB62500BA3A29 /* ProductList.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = ProductList.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		775B0AD525BDBACB00BA3A29 /* ApplicationPresenterTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApplicationPresenterTest.swift; sourceTree = "<group>"; };
@@ -77,6 +81,7 @@
 			files = (
 				77D91C1325C2455300E239ED /* ProductDetail.framework in Frameworks */,
 				775B0AC925BDB62500BA3A29 /* ProductList.framework in Frameworks */,
+				775966A225C44E8F008F2FF3 /* MLTechNetwork.framework in Frameworks */,
 				775B0A0F25BD037600BA3A29 /* MLTechCore.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -95,6 +100,7 @@
 		775B0A0D25BD037600BA3A29 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				775966A125C44E8F008F2FF3 /* MLTechNetwork.framework */,
 				77D91C1225C2455300E239ED /* ProductDetail.framework */,
 				775B0AC825BDB62500BA3A29 /* ProductList.framework */,
 				775B0A0E25BD037600BA3A29 /* MLTechCore.framework */,
