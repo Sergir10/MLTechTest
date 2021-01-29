@@ -9,15 +9,20 @@
 import Combine
 import MLTechCore
 
-final class SearchProductUseCase: BaseUseCase<ProductList, String> {
-    private var productRepository: ProductListRespositoryType
+struct SearchProductParams {
+    let query: String
+    let paging: CorePaginate?
+}
 
-    init(productRepository: ProductListRespositoryType) {
-        self.productRepository = productRepository
+final class SearchProductUseCase: BaseUseCase<ProductList, SearchProductParams> {
+    private var productListRepository: ProductListRespositoryType
+
+    init(productListRepository: ProductListRespositoryType) {
+        self.productListRepository = productListRepository
     }
 
-    override func buildUseCase(params: String) -> AnyPublisher<ProductList, InterfaceError> {
-        productRepository.searchProduct(by: params)
+    override func buildUseCase(params: SearchProductParams) -> AnyPublisher<ProductList, InterfaceError> {
+        productListRepository.searchProduct(by: params.query, page: params.paging)
             .mapError { self.userFriendlyError($0) }
             .eraseToAnyPublisher()
     }

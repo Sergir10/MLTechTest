@@ -12,11 +12,13 @@ import MLTechCore
 final class ProductListPresenter: BasePresenter<ProductListViewController, ProductListViewControllerType> {
     struct Dependencies {
         var coordinator: ProductListCoordinatorType
-        var searchProductUseCase: BaseUseCase<ProductList, String>
+        var searchProductUseCase: BaseUseCase<ProductList, SearchProductParams>
     }
 
     private let dependencies: Dependencies
     private var products: [ProductListResult] = []
+    private var pagin: CorePaginate?
+    private var query = ""
 
     init(dependencies: Dependencies) {
         self.dependencies = dependencies
@@ -26,14 +28,17 @@ final class ProductListPresenter: BasePresenter<ProductListViewController, Produ
     override func viewDidLoad() {}
 
     private func searchProduct(by name: String) {
+        query = name
         view.showProgress()
         dependencies.searchProductUseCase.execute(
-            params: name,
+            params: SearchProductParams(query: name, paging: nil),
             onSuccess: { productList in
                 self.processProductList(productList)
+                self.pagin = productList.paging
             },
             onError: { error in
                 self.view.presentError(error)
+                self.view.hideProgress()
             },
             onFinished: {
                 self.view.hideProgress()
@@ -83,5 +88,9 @@ extension ProductListPresenter: ProductListPresenterType {
 
         let selectedProduct = products[indexpath.row]
         dependencies.coordinator.runProductDetailModule(for: selectedProduct.identifier)
+    }
+
+    func loadMoreReached() {
+        view.presentError(InterfaceError.custom(message: "Pagination no implementada debido a falta de documentación en el API."))
     }
 }

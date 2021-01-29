@@ -8,7 +8,8 @@
 
 import Combine
 import MLTechNetwork
+import MLTechCore
 
 protocol ProductListRespositoryType: AnyObject {
-    func searchProduct(by query: String) -> AnyPublisher<ProductList, ServiceError>
+    func searchProduct(by query: String, page: CorePaginate?) -> AnyPublisher<ProductList, ServiceError>
 }

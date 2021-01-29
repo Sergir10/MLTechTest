@@ -8,6 +8,7 @@
 
 import Foundation
 
-public protocol ItemCellSelectable: AnyObject {
+public protocol CollectionViewDelegate: AnyObject {
     func didSelectItem(at indexPath: IndexPath)
+    func loadMore()
 }

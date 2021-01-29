@@ -20,7 +20,7 @@ final class ProductListViewController: BaseViewController<ProductListPresenterTy
         super.viewDidLoad()
         initialSetup()
     }
-    
+
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         navigationController?.setNavigationBarHidden(true, animated: false)
@@ -31,7 +31,8 @@ final class ProductListViewController: BaseViewController<ProductListPresenterTy
         collectionViewDataSource = ProductCollectionViewDataSource(
             collectionView: customView.productCollectionView,
             sections: [],
-            delegate: self)
+            delegate: self,
+            isLoadMoreHidden: false)
     }
 }
 
@@ -75,5 +76,9 @@ extension ProductListViewController: ProductListViewControllerType {
 
     func didSelectItem(at indexPath: IndexPath) {
         presenter.selectedItem(at: indexPath)
+    }
+
+    func loadMore() {
+        presenter.loadMoreReached()
     }
 }

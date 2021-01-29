@@ -22,13 +22,13 @@ open class BaseCollectionView<T: SectionType, U: CellConfigurable>: CollectionVi
     private lazy var dataSource = makeDataSource()
     private var isLoadMoreHidden: Bool
 
-    public weak var delegate: ItemCellSelectable?
+    public weak var delegate: CollectionViewDelegate?
     public var collectionView: UICollectionView
     public var sections: [T] = [] {
         didSet { updateDataSource() }
     }
 
-    public init(collectionView: UICollectionView, sections: [T], delegate: ItemCellSelectable? = nil, isLoadMoreHidden: Bool = true) {
+    public init(collectionView: UICollectionView, sections: [T], delegate: CollectionViewDelegate? = nil, isLoadMoreHidden: Bool = true) {
         self.collectionView = collectionView
         self.sections = sections
         self.delegate = delegate
@@ -50,7 +50,7 @@ open class BaseCollectionView<T: SectionType, U: CellConfigurable>: CollectionVi
     private func setupSuplementaryView() {
         dataSource.supplementaryViewProvider = { (collectionView: UICollectionView, kind: String, indexPath: IndexPath) -> UICollectionReusableView? in
             if let footerView = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: LoadMoreSupplementaryView.reuseIdentifier, for: indexPath) as? LoadMoreSupplementaryView {
-                print("Load moreeeee")
+                self.delegate?.loadMore()
                 return footerView
             }
 

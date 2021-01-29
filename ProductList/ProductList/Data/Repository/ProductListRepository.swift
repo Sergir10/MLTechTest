@@ -7,6 +7,7 @@
 //
 
 import Combine
+import MLTechCore
 import MLTechNetwork
 
 final class ProductListRespository {
@@ -20,8 +21,10 @@ final class ProductListRespository {
         self.client = client
     }
 
-    private func endpointForQuery(_ query: String) -> RESTEndpoint {
-        return RESTEndpoint(method: .get, relativePath: Constant.relativePath, params: ["q": query], contentType: .URLEncoded)
+    private func endpointForQuery(_ query: String, page: CorePaginate?) -> RESTEndpoint {
+        let params = page == nil ? ["q": query] : ["offset": page!.offset, "q": query]
+
+        return RESTEndpoint(method: .get, relativePath: Constant.relativePath, params: params, contentType: .URLEncoded)
     }
 
     private func mapData(_ data: APIProductList) -> AnyPublisher<ProductList, ServiceError> {
@@ -35,8 +38,8 @@ final class ProductListRespository {
 }
 
 extension ProductListRespository: ProductListRespositoryType {
-    func searchProduct(by query: String) -> AnyPublisher<ProductList, ServiceError> {
-        client.requestTo(endpoint: endpointForQuery(query), model: APIProductList.self)
+    func searchProduct(by query: String, page: CorePaginate?) -> AnyPublisher<ProductList, ServiceError> {
+        client.requestTo(endpoint: endpointForQuery(query, page: page), model: APIProductList.self)
             .flatMap { self.mapData($0) }
             .eraseToAnyPublisher()
     }

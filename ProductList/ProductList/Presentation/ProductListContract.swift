@@ -9,7 +9,7 @@
 import MLTechCore
 import UIKit
 
-protocol ProductListViewControllerType: ItemCellSelectable, ErrorShowable, ProgressShowable, UISearchBarDelegate {
+protocol ProductListViewControllerType: CollectionViewDelegate, ErrorShowable, ProgressShowable, UISearchBarDelegate {
     func showProduct(_ productSection: ProductListSectionViewModel)
     func showEmptyState(_ productSection: ProductListSectionViewModel, message: String)
     func setDescriptionTitle(_ title: String)
@@ -18,6 +18,7 @@ protocol ProductListViewControllerType: ItemCellSelectable, ErrorShowable, Progr
 protocol ProductListPresenterType: Bindable {
     func searchBarSearchButtonClicked(with text: String)
     func selectedItem(at indexpath: IndexPath)
+    func loadMoreReached()
 }
 
 protocol ProductListViewType: UIView {
