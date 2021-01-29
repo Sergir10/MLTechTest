@@ -13,6 +13,8 @@ protocol ProductListViewControllerType: CollectionViewDelegate, ErrorShowable, P
     func showProduct(_ productSection: ProductListSectionViewModel)
     func showEmptyState(_ productSection: ProductListSectionViewModel, message: String)
     func setDescriptionTitle(_ title: String)
+    func hideCollectionFooter()
+    func showCollectionFooter()
 }
 
 protocol ProductListPresenterType: Bindable {

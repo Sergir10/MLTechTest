@@ -20,10 +20,10 @@ private struct Constants {
 
 open class BaseCollectionView<T: SectionType, U: CellConfigurable>: CollectionViewDataSource<T>, CollectionViewType where T.DataType == U.DataType {
     private lazy var dataSource = makeDataSource()
-    private var isLoadMoreHidden: Bool
-
     public weak var delegate: CollectionViewDelegate?
     public var collectionView: UICollectionView
+    public var isLoadMoreHidden: Bool
+
     public var sections: [T] = [] {
         didSet { updateDataSource() }
     }
@@ -50,7 +50,15 @@ open class BaseCollectionView<T: SectionType, U: CellConfigurable>: CollectionVi
     private func setupSuplementaryView() {
         dataSource.supplementaryViewProvider = { (collectionView: UICollectionView, kind: String, indexPath: IndexPath) -> UICollectionReusableView? in
             if let footerView = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: LoadMoreSupplementaryView.reuseIdentifier, for: indexPath) as? LoadMoreSupplementaryView {
-                self.delegate?.loadMore()
+                if self.sections[indexPath.section].data.isEmpty {
+                    footerView.activityIndicatorView.isHidden = true
+                    footerView.activityIndicatorView.stopAnimating()
+                } else {
+                    footerView.activityIndicatorView.isHidden = false
+                    footerView.activityIndicatorView.startAnimating()
+                    self.delegate?.loadMore()
+                }
+
                 return footerView
             }
 

@@ -81,4 +81,12 @@ extension ProductListViewController: ProductListViewControllerType {
     func loadMore() {
         presenter.loadMoreReached()
     }
+    
+    func showCollectionFooter() {
+        collectionViewDataSource.isLoadMoreHidden = false
+    }
+    
+    func hideCollectionFooter() {
+        collectionViewDataSource.isLoadMoreHidden = true
+    }
 }
