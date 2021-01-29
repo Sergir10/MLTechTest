@@ -17,8 +17,8 @@ final class ProductListViewController: BaseViewController<ProductListPresenterTy
     }
 
     override func viewDidLoad() {
-        initialSetup()
         super.viewDidLoad()
+        initialSetup()
     }
     
     override func viewWillAppear(_ animated: Bool) {

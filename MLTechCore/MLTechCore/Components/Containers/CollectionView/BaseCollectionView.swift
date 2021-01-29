@@ -14,8 +14,13 @@ public protocol CollectionViewType: ContainerConfigurable, UICollectionViewDeleg
     var collectionView: UICollectionView { get }
 }
 
+private struct Constants {
+    static let footerElementKind = "footerElementKind"
+}
+
 open class BaseCollectionView<T: SectionType, U: CellConfigurable>: CollectionViewDataSource<T>, CollectionViewType where T.DataType == U.DataType {
     private lazy var dataSource = makeDataSource()
+    private var isLoadMoreHidden: Bool
 
     public weak var delegate: ItemCellSelectable?
     public var collectionView: UICollectionView
@@ -23,10 +28,11 @@ open class BaseCollectionView<T: SectionType, U: CellConfigurable>: CollectionVi
         didSet { updateDataSource() }
     }
 
-    public init(collectionView: UICollectionView, sections: [T], delegate: ItemCellSelectable? = nil) {
+    public init(collectionView: UICollectionView, sections: [T], delegate: ItemCellSelectable? = nil, isLoadMoreHidden: Bool = true) {
         self.collectionView = collectionView
         self.sections = sections
         self.delegate = delegate
+        self.isLoadMoreHidden = isLoadMoreHidden
         super.init(collectionView: collectionView) { _, _, _ in nil }
 
         initialSetup()
@@ -41,10 +47,49 @@ open class BaseCollectionView<T: SectionType, U: CellConfigurable>: CollectionVi
         }
     }
 
+    private func setupSuplementaryView() {
+        dataSource.supplementaryViewProvider = { (collectionView: UICollectionView, kind: String, indexPath: IndexPath) -> UICollectionReusableView? in
+            if let footerView = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: LoadMoreSupplementaryView.reuseIdentifier, for: indexPath) as? LoadMoreSupplementaryView {
+                print("Load moreeeee")
+                return footerView
+            }
+
+            preconditionFailure()
+        }
+    }
+
+    private func setupFooter() {
+        guard !isLoadMoreHidden else {
+            return
+        }
+
+        setupSuplementaryView()
+        collectionView.collectionViewLayout = createLayout()
+    }
+
     private func initialSetup() {
         collectionView.register(U.self, forCellWithReuseIdentifier: U.reuseIdentifier)
+        collectionView.register(LoadMoreSupplementaryView.self, forSupplementaryViewOfKind: Constants.footerElementKind, withReuseIdentifier: LoadMoreSupplementaryView.reuseIdentifier)
         collectionView.delegate = self
+
+        setupFooter()
         updateDataSource()
+    }
+
+    private func createLayout() -> UICollectionViewLayout {
+        let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .fractionalHeight(1.0))
+        let item = NSCollectionLayoutItem(layoutSize: itemSize)
+
+        let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .estimated(100))
+        let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize, subitems: [item])
+
+        let footerSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .estimated(50))
+        let footer = NSCollectionLayoutBoundarySupplementaryItem(layoutSize: footerSize, elementKind: Constants.footerElementKind, alignment: .bottom)
+
+        let section = NSCollectionLayoutSection(group: group)
+        section.boundarySupplementaryItems = [footer]
+        let layout = UICollectionViewCompositionalLayout(section: section)
+        return layout
     }
 
     open func updateDataSource() {
@@ -69,6 +114,6 @@ open class BaseCollectionView<T: SectionType, U: CellConfigurable>: CollectionVi
     open func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         delegate?.didSelectItem(at: indexPath)
     }
-    
-    open func scrollViewDidScroll(_ scrollView: UIScrollView) {}
+
+    open func scrollViewDidScroll(_: UIScrollView) {}
 }

@@ -167,7 +167,7 @@ final class ProducListCollectionViewCell: UICollectionViewCell, CellConfigurable
 
     func configure(with data: ProducListCellViewModel) {
         titleLabel.text = data.title
-        priceLabel.text = "$  \(data.price)"
+        priceLabel.text = NSNumber(integerLiteral: data.price).toLocalCurrency() ?? "$\(data.price)"
         shippingLabel.text = data.freeShipping ? "Envio Gratis." : "Costo asociado de envio."
         quantityLabel.text = "Unidades disponibles: \(data.availableQuantity)"
         productImageView.downloadImage(from: data.thumbnail, placeHolder: UIImage())
