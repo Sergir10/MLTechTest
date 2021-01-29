@@ -22,7 +22,6 @@ target 'ProductList' do
     inherit! :search_paths
     # Pods for testing
   end
-  
 end
 
 target 'ProductDetail' do
@@ -32,8 +31,8 @@ target 'ProductDetail' do
     inherit! :search_paths
     # Pods for testing
   end
-  
 end
+
   target 'MLTechCore' do
     project 'MLTechCore/MLTechCore'
   
@@ -41,9 +40,7 @@ end
       inherit! :search_paths
       # Pods for testing
     end
-    
   end
-end
 
 target 'MLTechNetwork' do
   project 'MLTechNetwork/MLTechNetwork'
@@ -62,5 +59,4 @@ target 'MLApplication' do
     # Pods for testing
   end
 end
-
 end
